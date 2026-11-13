@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studyly privacy policy</title>
+<meta name="description" content="Studyly privacy policy for the Studyly app.">
+<style>
+  :root { --bg:#ffffff; --ink:#1b1f3b; --muted:#555b7a; --line:#dfe2f0; --accent:#3b4cca; --soft:#f4f5fb; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#12142a; --ink:#eceefb; --muted:#a6abc9; --line:#2c3052; --accent:#9aa6ff; --soft:#1b1e3a; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:24px 16px 64px; }
+  nav { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; padding-bottom:12px; border-bottom:1px solid var(--line); font-size:14px; }
+  nav strong { color:var(--ink); }
+  a { color:var(--accent); }
+  h1 { font-size:28px; line-height:1.25; margin:24px 0 4px; letter-spacing:-.3px; }
+  h2 { font-size:20px; margin:32px 0 8px; }
+  p, li { color:var(--ink); }
+  em { color:var(--muted); }
+  ul, ol { padding-left:22px; }
+  li { margin:6px 0; }
+  code { background:var(--soft); padding:1px 5px; border-radius:5px; font-size:.9em; }
+  .table { overflow-x:auto; border:1px solid var(--line); border-radius:12px; margin:16px 0; }
+  table { border-collapse:collapse; width:100%; min-width:560px; font-size:14.5px; }
+  th, td { text-align:left; vertical-align:top; padding:10px 12px; border-top:1px solid var(--line); }
+  thead th { background:var(--soft); border-top:0; }
+  footer { margin-top:40px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+<nav><strong>Studyly</strong><a href="terms.html">Terms of use</a></nav>
+<h1 id="studyly-privacy-policy">Studyly privacy policy</h1>
+<p><em>Last updated: 10 November 2026</em></p>
+<p>Studyly helps students plan and track their studies: tasks, exams, classes, focus sessions and progress. This policy explains what the app keeps, why, who can see it, how long it's kept, and how to remove it. The same points are in the app under <strong>Settings → Privacy &amp; data</strong>.</p>
+<h2 id="what-the-app-keeps">What the app keeps</h2>
+<div class="table"><table><thead><tr><th>What</th><th>Why</th><th>Where</th></tr></thead><tbody><tr><td><strong>Your account</strong>: email address, name, school and, if you choose one, a profile photo</td><td>To sign you in and show your name</td><td>Supabase (database and sign-in)</td></tr><tr><td><strong>Premium</strong>: your plan, through which store it was bought, and until when (never card or payment details)</td><td>To give Premium to the right account</td><td>Supabase, and RevenueCat</td></tr><tr><td><strong>Your study data</strong>: tasks, steps, notes, exams and scores, classes and attendance, breaks, focus sessions, goals, flashcards, achievements and settings</td><td>To keep it on all your devices</td><td>Supabase database, locked to your account</td></tr><tr><td><strong>Photos you attach</strong> to tasks</td><td>To show them on all your devices</td><td>Supabase storage, locked to your account</td></tr><tr><td><strong>A copy on each device</strong> where you sign in</td><td>So the app works offline</td><td>That device; signing out removes it</td></tr><tr><td><strong>Study groups you make or join</strong>: the group, its timetable and its board posts and replies</td><td>To share them with the group</td><td>Supabase database</td></tr><tr><td><strong>AI helper use</strong>: how many times you asked today</td><td>The daily limit of 30</td><td>Supabase database</td></tr><tr><td><strong>Error reports</strong>: what went wrong, the app version and the kind of device</td><td>To find and fix problems</td><td>Supabase database</td></tr></tbody></table></div>
+<p>Each row in the database is locked to its account by database rules. No other user can read your data, and other accounts can't change it.</p>
+<h2 id="what-s-shared-and-only-when-you-choose">What's shared, and only when you choose</h2>
+<ul><li><strong>Study groups.</strong> When you share your timetable with a group, the group's members see your classes, exam dates and breaks. Posts and replies on a group's board show your name to the group.</li><li><strong>Studying now.</strong> While your focus timer runs, the people in your study groups see your name, the subject and when the session ends. They never see the task. This isn't stored: it disappears when the timer stops or the app closes. You can turn it off in <strong>Settings → Study groups</strong>.</li><li><strong>Progress reports</strong> go only to the person you send them to, by the app you choose to share with.</li><li><strong>The AI helper</strong>, only when you use it. See below.</li></ul>
+<h2 id="the-ai-helper">The AI helper</h2>
+<p>The AI helper uses Claude, an AI made by Anthropic. Only when you ask it, Studyly's server sends Anthropic:</p>
+<ul><li>the notes you paste, for flashcards or a quiz;</li><li>or, for "What should I study now?", a short summary: task titles, due dates, exam dates, grades, attendance and focus times.</li></ul>
+<p>Your notes in tasks, your photos and your account details are never sent. The answer isn't stored on Studyly's server, which keeps only how many times you asked that day. Anthropic handles what it receives under its own <a href="https://www.anthropic.com/legal/privacy">privacy policy</a>.</p>
+<h2 id="who-processes-data-for-the-app">Who processes data for the app</h2>
+<div class="table"><table><thead><tr><th>Service</th><th>What for</th></tr></thead><tbody><tr><td><strong>Supabase</strong></td><td>The database, sign-in, photo storage and the server functions</td></tr><tr><td><strong>Anthropic</strong></td><td>The AI helper, only when you use it</td></tr><tr><td><strong>Google (Gmail)</strong></td><td>Sending sign-in and welcome emails</td></tr><tr><td><strong>Expo</strong></td><td>Building and delivering the app. Expo doesn't receive your study data</td></tr><tr><td><strong>RevenueCat</strong></td><td>Premium purchases: which plan was bought, through which store, and until when. Payment details stay with Google Play or the App Store</td></tr><tr><td><strong>Google AdMob</strong></td><td>Ads, for accounts without Premium, in the Android and iPhone apps (see <a href="#ads">Ads</a>)</td></tr></tbody></table></div>
+<h2 id="ads">Ads</h2>
+<ul><li><strong>Who sees them:</strong> every account that doesn't have <strong>Premium</strong>, in the Android and iPhone apps. <strong>Premium</strong> accounts see no ads, and the web app has none.</li><li><strong>Students under 18:</strong> accounts that said at sign-up they're under 18, and older accounts with no age recorded, are marked to Google as <strong>under the age of consent</strong>. Google then shows them only non-personalised ads rated for general audiences (G). Adults get non-personalised ads rated up to PG.</li><li><strong>Where:</strong> a banner under the quote on the Dashboard and one at the bottom of Progress, and now and then a full-screen ad at a natural break (when a break starts after a focus session, or when a finished flashcard review closes), at most once every 10 minutes. Never during a focus session, a review or a quiz.</li><li><strong>Never personalised.</strong> The app asks Google AdMob for non-personalised ads only, for everyone. Google still receives what any ad needs: the device type, the device's advertising ID, an approximate location from the IP address, and how the ad was seen, to show it, limit how often, and prevent fraud. Your study data, notes and account details are never sent.</li><li><strong>Consent:</strong> where the law requires it (for example in the EU and UK), Google's consent form asks first.</li><li>Google's use of that data is described in its <a href="https://policies.google.com/privacy">privacy policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps</a>.</li></ul>
+<h2 id="what-the-app-never-does">What the app never does</h2>
+<ul><li>No personalised ads for anyone, and only general-audience (G) ads for anyone under 18.</li><li>No analytics or tracking tools.</li><li>No selling or renting of personal data, and no sharing with advertisers or data brokers.</li></ul>
+<p>Reminders and notifications are scheduled on your device. They aren't sent from a server.</p>
+<h2 id="how-long-it-s-kept">How long it's kept</h2>
+<ul><li><strong>Your data:</strong> until you delete it or delete your account.</li><li><strong>Nightly backups:</strong> each copy is kept for 14 days, so the service can recover from a mistake or a failure.</li><li><strong>Error reports:</strong> deleted after 30 days.</li><li><strong>AI usage counts:</strong> deleted after 30 days.</li></ul>
+<h2 id="your-choices-and-rights">Your choices and rights</h2>
+<p>Everything is in the app:</p>
+<ul><li><strong>See and change</strong> your data: it's all in the app, and your name, school and photo are in your profile.</li><li><strong>Get a copy:</strong> Settings → Privacy &amp; data → <em>Save a copy of your data</em>, or Settings → Data → Export. This saves one file with everything, which can also be restored.</li><li><strong>Stop sharing:</strong> leave a study group, stop sharing a group you made, or turn off <em>Show my focus sessions to my groups</em>.</li><li><strong>Delete your account:</strong> Settings → Privacy &amp; data → <em>Delete my account</em>. This removes your account and everything in it straight away: your study data, photos, groups you own (with their boards), your replies, error reports and your copies in the backups. There are a few seconds to undo it in the app first.</li></ul>
+<p>Depending on where you live, you may have more rights over your data, such as asking for a copy or for it to be deleted. The options above cover those. You can also contact us.</p>
+<h2 id="children">Children</h2>
+<p>Studyly is a study tool for students. At sign-up everyone chooses their age group. Anyone under 18 must confirm that a parent or guardian knows about it and agrees, and everyone agrees to the terms of use and this policy. The account keeps that choice, with the date and the version of the terms agreed to. A parent or guardian can ask for a child's account and data to be deleted using the contact below.</p>
+<h2 id="security">Security</h2>
+<ul><li><strong>In transit:</strong> data travels encrypted (HTTPS).</li><li><strong>Access:</strong> each account can reach only its own data, enforced by the database.</li><li><strong>Passwords:</strong> handled by Supabase's sign-in service and never stored by the app.</li></ul>
+<h2 id="changes">Changes</h2>
+<p>If this policy changes, the date at the top changes, and the app's Privacy &amp; data page is updated to match.</p>
+<h2 id="contact">Contact</h2>
+<p>Questions or requests about your data: <strong>drsutar08@gmail.com</strong>.</p>
+<footer><a href="terms.html">Terms of use</a></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Supabase CLI settings for this project (deploys use --project-ref; this keeps the function settings with the code)
+project_id = "xlqnkglftspdowyucioc"
+
+[functions.welcome-email]
+# the database calls it with no signed-in user (it only emails real, confirmed, not-yet-welcomed accounts)
+verify_jwt = false
+
+[functions.study-helper]
+# only signed-in users (their token is checked, and each account has a daily allowance)
+verify_jwt = true
+
+[functions.revenuecat-webhook]
+# RevenueCat calls it without a Supabase sign-in: it checks the REVENUECAT_WEBHOOK_SECRET instead
+verify_jwt = false

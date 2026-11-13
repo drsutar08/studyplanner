@@ -1,0 +1,201 @@
+{
+  "done": [
+    {
+      "file": "01-intro.png",
+      "title": "Welcome slides"
+    },
+    {
+      "file": "02-sign-in.png",
+      "title": "Sign in"
+    },
+    {
+      "file": "03-create-account.png",
+      "title": "Create account (password strength, sample data)"
+    },
+    {
+      "file": "04-dashboard.png",
+      "title": "Dashboard"
+    },
+    {
+      "file": "05-smart-plan.png",
+      "title": "Smart plan for today"
+    },
+    {
+      "file": "46-quick-add.png",
+      "title": "Quick add: a task from one line"
+    },
+    {
+      "file": "42-ai-advice.png",
+      "title": "AI study helper: what to study now"
+    },
+    {
+      "file": "43-ai-cards.png",
+      "title": "AI study helper: flashcards from notes"
+    },
+    {
+      "file": "06-new-task.png",
+      "title": "New task sheet"
+    },
+    {
+      "file": "07-edit-task-steps.png",
+      "title": "A task with steps and a link"
+    },
+    {
+      "file": "08-multi-select.png",
+      "title": "Select several tasks at once"
+    },
+    {
+      "file": "09-search.png",
+      "title": "Search"
+    },
+    {
+      "file": "10-notifications.png",
+      "title": "Notifications bell"
+    },
+    {
+      "file": "11-calendar-month.png",
+      "title": "Calendar: month"
+    },
+    {
+      "file": "12-calendar-week.png",
+      "title": "Calendar: week"
+    },
+    {
+      "file": "13-upcoming-exams.png",
+      "title": "Upcoming exams"
+    },
+    {
+      "file": "14-exam-prep.png",
+      "title": "Exam prep plan"
+    },
+    {
+      "file": "15-timetable.png",
+      "title": "Weekly timetable and attendance"
+    },
+    {
+      "file": "16-add-class.png",
+      "title": "Add a class"
+    },
+    {
+      "file": "17-vacations.png",
+      "title": "Vacations and breaks"
+    },
+    {
+      "file": "18-focus-timer.png",
+      "title": "Focus timer"
+    },
+    {
+      "file": "19-subjects.png",
+      "title": "Subjects"
+    },
+    {
+      "file": "37-flashcards.png",
+      "title": "Flashcards"
+    },
+    {
+      "file": "38-flashcard-review.png",
+      "title": "Reviewing flashcards"
+    },
+    {
+      "file": "39-add-cards.png",
+      "title": "Paste many flashcards at once"
+    },
+    {
+      "file": "20-progress.png",
+      "title": "Progress"
+    },
+    {
+      "file": "21-weekly-review.png",
+      "title": "Weekly review"
+    },
+    {
+      "file": "40-progress-report.png",
+      "title": "Progress report for parents and teachers"
+    },
+    {
+      "file": "41-achievements.png",
+      "title": "Achievements and streak protection"
+    },
+    {
+      "file": "22-grades.png",
+      "title": "Grades and GPA"
+    },
+    {
+      "file": "23-what-if.png",
+      "title": "What score do I need? (what-if)"
+    },
+    {
+      "file": "24-attendance.png",
+      "title": "Attendance"
+    },
+    {
+      "file": "25-settings.png",
+      "title": "Settings"
+    },
+    {
+      "file": "26-settings-sync.png",
+      "title": "Cloud sync, smart reminders and data"
+    },
+    {
+      "file": "47-reading.png",
+      "title": "Text size and the easier-to-read font"
+    },
+    {
+      "file": "48-privacy.png",
+      "title": "Privacy & data"
+    },
+    {
+      "file": "49-premium.png",
+      "title": "Study Planner Premium"
+    },
+    {
+      "file": "27-profile.png",
+      "title": "Profile"
+    },
+    {
+      "file": "28-shortcuts.png",
+      "title": "Keyboard shortcuts"
+    },
+    {
+      "file": "29-dark-mode.png",
+      "title": "Dark mode"
+    },
+    {
+      "file": "31-not-synced-dot.png",
+      "title": "The \"not synced\" dot (offline)"
+    },
+    {
+      "file": "30-hindi.png",
+      "title": "Four languages (Hindi shown)"
+    },
+    {
+      "file": "32-phone.png",
+      "title": "On a phone"
+    },
+    {
+      "file": "33-share-live-group.png",
+      "title": "Share a live study group (link and QR code)"
+    },
+    {
+      "file": "34-group-board-owner.png",
+      "title": "Group board: notes and shared tasks"
+    },
+    {
+      "file": "35-group-member.png",
+      "title": "A member’s view of the board"
+    },
+    {
+      "file": "36-join-group.png",
+      "title": "Joining a group from a link"
+    },
+    {
+      "file": "44-studying-now.png",
+      "title": "Study together: who’s studying now, with Join"
+    },
+    {
+      "file": "45-board-replies.png",
+      "title": "Replies on the group board"
+    }
+  ],
+  "failed": []
+}

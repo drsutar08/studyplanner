@@ -1,24 +1,186 @@
 {
   "expo": {
-    "name": "study-planner-app",
+    "name": "Studyly",
     "slug": "study-planner-app",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.studyly.studyplanner.app",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSSpeechRecognitionUsageDescription": "Studyly turns what you say into a task when you tap the mic.",
+        "NSMicrophoneUsageDescription": "Studyly uses the microphone only when you tap the mic to add a task by voice."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#5B6CF0",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+      },
+      "package": "com.studyly.studyplanner.app",
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.INTERNET",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-status-bar",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#151B33",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#3B4CCA"
+        }
+      ],
+      "@react-native-community/datetimepicker",
+      "expo-localization",
+      [
+        "expo-widgets",
+        {
+          "enableAndroid": true,
+          "widgets": [
+            {
+              "name": "NextClass",
+              "displayName": "Next class",
+              "description": "Your next class with its time and room.",
+              "ios": {
+                "supportedFamilies": [
+                  "systemSmall",
+                  "systemMedium"
+                ]
+              },
+              "android": {
+                "targetCellWidth": 2,
+                "targetCellHeight": 1,
+                "resizeMode": "both"
+              }
+            },
+            {
+              "name": "Today",
+              "displayName": "Today",
+              "description": "Tasks left today, your focus time and flashcards due.",
+              "ios": {
+                "supportedFamilies": [
+                  "systemSmall",
+                  "systemMedium"
+                ]
+              },
+              "android": {
+                "targetCellWidth": 2,
+                "targetCellHeight": 2,
+                "resizeMode": "both"
+              }
+            }
+          ]
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Studyly uses your photos so you can choose a profile picture.",
+          "cameraPermission": false,
+          "microphonePermission": "Studyly uses the microphone only when you tap the mic to add a task by voice."
+        }
+      ],
+      "expo-sqlite",
+      "expo-sharing",
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Studyly uses the microphone only when you tap the mic to add a task by voice.",
+          "speechRecognitionPermission": "Studyly turns what you say into a task when you tap the mic."
+        }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-6071081432967277~1398945137",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511",
+          "delayAppMeasurementInit": true
+        }
+      ]
+    ],
+    "scheme": "studyplanner",
+    "extra": {
+      "eas": {
+        "build": {
+          "experimental": {
+            "ios": {
+              "appExtensions": [
+                {
+                  "targetName": "ExpoWidgetsTarget",
+                  "bundleIdentifier": "com.studyly.studyplanner.app.ExpoWidgetsTarget",
+                  "entitlements": {
+                    "com.apple.security.application-groups": [
+                      "group.com.studyly.studyplanner.app"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "projectId": "85437a6b-9418-47ea-a53f-1e48258f93e2"
+      },
+      "legal": {
+        "privacyUrl": "https://drsutar08.github.io/studyplanner/privacy.html",
+        "termsUrl": "https://drsutar08.github.io/studyplanner/terms.html"
+      },
+      "ads": {
+        "androidBanner": "ca-app-pub-6071081432967277/4970911528",
+        "androidRewarded": "ca-app-pub-6071081432967277/9217725403",
+        "androidInterstitial": "ca-app-pub-6071081432967277/7237595172",
+        "androidNative": "ca-app-pub-6071081432967277/9069244108",
+        "iosNative": "",
+        "iosBanner": "",
+        "iosRewarded": "",
+        "iosInterstitial": ""
+      },
+      "revenuecat": {
+        "androidKey": "",
+        "iosKey": "",
+        "devAndroidKey": "test_ktEkHPfueTxPkzpOrsTlsycsste",
+        "devIosKey": ""
+      }
+    },
+    "owner": "drsutar08",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/85437a6b-9418-47ea-a53f-1e48258f93e2"
     }
   }
 }

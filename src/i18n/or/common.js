@@ -1,0 +1,81 @@
+// Translated from ../en/common.js
+export default {
+  common: {
+    today: 'ଆଜି',
+    tomorrow: 'ଆସନ୍ତାକାଲି',
+    yesterday: 'ଗତକାଲି',
+    inDays: { one: '{count} ଦିନରେ', other: '{count} ଦିନରେ' },
+    daysAgo: { one: '{count} ଦିନ ପୂର୍ବେ', other: '{count} ଦିନ ପୂର୍ବେ' },
+    save: 'ସେଭ୍ କରନ୍ତୁ',
+    saveChanges: 'ପରିବର୍ତ୍ତନ ସେଭ୍ କରନ୍ତୁ',
+    cancel: 'ବାତିଲ୍',
+    delete: 'ଡିଲିଟ୍',
+    edit: 'ଏଡିଟ୍',
+    undo: 'ପୂର୍ବବତ୍',
+    close: 'ବନ୍ଦ କରନ୍ତୁ',
+    closeSheet: 'ସିଟ୍ ବନ୍ଦ କରନ୍ତୁ',
+    optional: 'ଇଚ୍ଛାଧୀନ',
+    none: 'କିଛି ନାହିଁ',
+    noSubject: 'କୌଣସି ବିଷୟ ନାହିଁ',
+    minutes: '{count} ମିନିଟ୍',
+  },
+  days: {
+    long: ['ରବିବାର', 'ସୋମବାର', 'ମଙ୍ଗଳବାର', 'ବୁଧବାର', 'ଗୁରୁବାର', 'ଶୁକ୍ରବାର', 'ଶନିବାର'],
+    short: ['ରବି', 'ସୋମ', 'ମଙ୍ଗଳ', 'ବୁଧ', 'ଗୁରୁ', 'ଶୁକ୍ର', 'ଶନି'],
+    narrow: ['ର', 'ସୋ', 'ମ', 'ବୁ', 'ଗୁ', 'ଶୁ', 'ଶ'],
+  },
+  // Home-screen widget (shown outside the app, so keep it short)
+  // Long-press shortcuts on the app icon (appShortcutLinks.js)
+  appShortcuts: {
+    newTask: 'ନୂଆ ଟାସ୍କ',
+    focus: 'ଫୋକସ ଆରମ୍ଭ କରନ୍ତୁ',
+    cards: 'ଫ୍ଲାସକାର୍ଡ ଦୋହରାନ୍ତୁ',
+  },
+  widget: {
+    nextClass: 'ପରବର୍ତ୍ତୀ କ୍ଲାସ୍',
+    empty: 'ଆଜି ଆଉ କ୍ଲାସ୍ ନାହିଁ',
+    now: 'ବର୍ତ୍ତମାନ',
+    online: 'ଅନଲାଇନ୍',
+    dayTime: '{day} · {time}',
+    // the "Today" widget
+    today: 'ଆଜି',
+    tasksLeft: { one: '1ଟି ଟାସ୍କ ବାକି', other: '{count}ଟି ଟାସ୍କ ବାକି' },
+    allDone: 'ଆଜିର ସବୁ କାମ ସରିଲା',
+    overdue: { one: '1ଟି ବିଳମ୍ବ', other: '{count}ଟି ବିଳମ୍ବ' },
+    focus: '{done} / {goal} ମିନିଟ ଫୋକସ',
+    cards: { one: 'ଦୋହରାଇବାକୁ 1ଟି ଫ୍ଲାସକାର୍ଡ', other: 'ଦୋହରାଇବାକୁ {count}ଟି ଫ୍ଲାସକାର୍ଡ' },
+    openToSee: 'ଆପଣଙ୍କ ଦିନ ଦେଖିବାକୁ ଆପ ଖୋଲନ୍ତୁ',
+  },
+  // Buttons on task reminder notifications
+  reminderActions: {
+    done: 'ସରିଲା ବୋଲି ଚିହ୍ନିତ କରନ୍ତୁ',
+    snooze: '1 ଘଣ୍ଟା ପରେ ମନେପକାନ୍ତୁ',
+    snoozedTitle: 'ରିମାଇଣ୍ଡର୍',
+  },
+  months: {
+    long: ['ଜାନୁଆରୀ', 'ଫେବୃଆରୀ', 'ମାର୍ଚ୍ଚ', 'ଅପ୍ରେଲ', 'ମଇ', 'ଜୁନ', 'ଜୁଲାଇ', 'ଅଗଷ୍ଟ', 'ସେପ୍ଟେମ୍ବର', 'ଅକ୍ଟୋବର', 'ନଭେମ୍ବର', 'ଡିସେମ୍ବର'],
+    short: ['ଜାନୁ', 'ଫେବୃ', 'ମାର୍ଚ୍ଚ', 'ଅପ୍ରେ', 'ମଇ', 'ଜୁନ', 'ଜୁଲା', 'ଅଗ', 'ସେପ୍ଟେ', 'ଅକ୍ଟୋ', 'ନଭେ', 'ଡିସେ'],
+  },
+  dateFormats: {
+    wdm: '{weekday}, {day} {month}',
+    wdmy: '{weekday}, {day} {month} {year}',
+    dm: '{day} {month}',
+    dmy: '{day} {month} {year}',
+    my: '{month} {year}',
+    m: '{month}',
+    w: '{weekday}',
+  },
+  appearance: {
+    title: 'ଦେଖାଯିବା ଶୈଳୀ',
+    theme: 'ଥିମ୍',
+    themeSystem: 'ସିଷ୍ଟମ୍',
+    themeLight: 'ଲାଇଟ୍',
+    themeDark: 'ଡାର୍କ',
+    themeHint: 'ସିଷ୍ଟମ୍ ବାଛିଲେ ଆପଣଙ୍କ ଫୋନର ଲାଇଟ୍ ବା ଡାର୍କ ମୋଡ୍ ଅନୁସାରେ ଚାଲିବ।',
+    language: 'ଭାଷା',
+    languageSystem: 'ସିଷ୍ଟମ୍',
+    languageHint: 'ସିଷ୍ଟମ୍ ବାଛିଲେ ଆପରେ ଥିଲେ ଆପଣଙ୍କ ଫୋନର ଭାଷା, ନହେଲେ ଇଂରାଜୀ ବ୍ୟବହାର ହେବ।',
+    themeA11y: 'ଥିମ୍: {name}',
+    languageA11y: 'ଭାଷା: {name}',
+  },
+};

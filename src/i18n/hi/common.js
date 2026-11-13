@@ -1,0 +1,81 @@
+// Translated from ../en/common.js
+export default {
+  common: {
+    today: 'आज',
+    tomorrow: 'कल',
+    yesterday: 'बीता कल',
+    inDays: { one: '{count} दिन में', other: '{count} दिन में' },
+    daysAgo: { one: '{count} दिन पहले', other: '{count} दिन पहले' },
+    save: 'सेव करें',
+    saveChanges: 'बदलाव सेव करें',
+    cancel: 'रद्द करें',
+    delete: 'हटाएँ',
+    edit: 'बदलें',
+    undo: 'वापस लें',
+    close: 'बंद करें',
+    closeSheet: 'शीट बंद करें',
+    optional: 'वैकल्पिक',
+    none: 'कोई नहीं',
+    noSubject: 'कोई विषय नहीं',
+    minutes: '{count} मिनट',
+  },
+  days: {
+    long: ['रविवार', 'सोमवार', 'मंगलवार', 'बुधवार', 'गुरुवार', 'शुक्रवार', 'शनिवार'],
+    short: ['रवि', 'सोम', 'मंगल', 'बुध', 'गुरु', 'शुक्र', 'शनि'],
+    narrow: ['र', 'सो', 'मं', 'बु', 'गु', 'शु', 'श'],
+  },
+  // Home-screen widget (shown outside the app, so keep it short)
+  // Long-press shortcuts on the app icon (appShortcutLinks.js)
+  appShortcuts: {
+    newTask: 'नया टास्क',
+    focus: 'फ़ोकस शुरू करें',
+    cards: 'फ़्लैशकार्ड दोहराएँ',
+  },
+  widget: {
+    nextClass: 'अगली क्लास',
+    empty: 'आज और कोई क्लास नहीं',
+    now: 'अभी',
+    online: 'ऑनलाइन',
+    dayTime: '{day} · {time}',
+    // the "Today" widget
+    today: 'आज',
+    tasksLeft: { one: '1 टास्क बाकी', other: '{count} टास्क बाकी' },
+    allDone: 'आज के सब काम पूरे',
+    overdue: { one: '1 देर से', other: '{count} देर से' },
+    focus: '{done} / {goal} मिनट फ़ोकस',
+    cards: { one: 'दोहराने के लिए 1 फ़्लैशकार्ड', other: 'दोहराने के लिए {count} फ़्लैशकार्ड' },
+    openToSee: 'अपना दिन देखने के लिए ऐप खोलें',
+  },
+  // Buttons on task reminder notifications
+  reminderActions: {
+    done: 'पूरा करें',
+    snooze: '1 घंटे बाद याद दिलाएँ',
+    snoozedTitle: 'रिमाइंडर',
+  },
+  months: {
+    long: ['जनवरी', 'फ़रवरी', 'मार्च', 'अप्रैल', 'मई', 'जून', 'जुलाई', 'अगस्त', 'सितंबर', 'अक्टूबर', 'नवंबर', 'दिसंबर'],
+    short: ['जन॰', 'फ़र॰', 'मार्च', 'अप्रैल', 'मई', 'जून', 'जुल॰', 'अग॰', 'सित॰', 'अक्टू॰', 'नव॰', 'दिस॰'],
+  },
+  dateFormats: {
+    wdm: '{weekday}, {day} {month}',
+    wdmy: '{weekday}, {day} {month} {year}',
+    dm: '{day} {month}',
+    dmy: '{day} {month} {year}',
+    my: '{month} {year}',
+    m: '{month}',
+    w: '{weekday}',
+  },
+  appearance: {
+    title: 'रूप-रंग',
+    theme: 'थीम',
+    themeSystem: 'सिस्टम',
+    themeLight: 'लाइट',
+    themeDark: 'डार्क',
+    themeHint: 'सिस्टम चुनने पर आपके फ़ोन का लाइट या डार्क मोड अपनाया जाता है।',
+    language: 'भाषा',
+    languageSystem: 'सिस्टम',
+    languageHint: 'सिस्टम चुनने पर आपके फ़ोन की भाषा इस्तेमाल होती है, अगर ऐप में वह उपलब्ध हो; वरना अंग्रेज़ी।',
+    themeA11y: 'थीम: {name}',
+    languageA11y: 'भाषा: {name}',
+  },
+};

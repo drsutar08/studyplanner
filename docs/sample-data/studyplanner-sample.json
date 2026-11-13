@@ -1,0 +1,1263 @@
+{
+  "app": "StudyPlanner",
+  "version": 1,
+  "exportedAt": "2026-10-31T06:38:27.463Z",
+  "exportedBy": "sample@studyplanner.app",
+  "data": {
+    "subjects": [
+      {
+        "id": "s-math",
+        "name": "Mathematics",
+        "color": "#E4572E",
+        "weeklyGoal": 180
+      },
+      {
+        "id": "s-bio",
+        "name": "Biology",
+        "color": "#17A398",
+        "weeklyGoal": 120
+      },
+      {
+        "id": "s-hist",
+        "name": "History",
+        "color": "#7A5CFA"
+      },
+      {
+        "id": "s-phys",
+        "name": "Physics",
+        "color": "#2E86DE",
+        "weeklyGoal": 120
+      },
+      {
+        "id": "s-eng",
+        "name": "English",
+        "color": "#F2A541"
+      }
+    ],
+    "tasks": [
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 60,
+        "priority": "high",
+        "done": false,
+        "completedAt": null,
+        "id": "t-lab",
+        "title": "Lab report: enzyme activity",
+        "subjectId": "s-bio",
+        "due": "2026-10-29",
+        "classId": "c-bio",
+        "subtasks": [
+          {
+            "id": "st1",
+            "title": "Write method",
+            "done": true
+          },
+          {
+            "id": "st2",
+            "title": "Plot results",
+            "done": false
+          },
+          {
+            "id": "st3",
+            "title": "Discussion",
+            "done": false
+          }
+        ]
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 45,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "t-essay-plan",
+        "title": "Plan the Partition essay",
+        "subjectId": "s-hist",
+        "due": "2026-10-30"
+      },
+      {
+        "time": "17:00",
+        "notes": "",
+        "estimate": 60,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "t-ps5",
+        "title": "Problem set 5: series",
+        "subjectId": "s-math",
+        "due": "2026-10-31",
+        "classId": "c-calc",
+        "subtasks": [
+          {
+            "id": "st4",
+            "title": "Q1–4",
+            "done": true
+          },
+          {
+            "id": "st5",
+            "title": "Q5–8",
+            "done": false
+          },
+          {
+            "id": "st6",
+            "title": "Check answers",
+            "done": false
+          }
+        ],
+        "attachments": [
+          {
+            "id": "a-ps5",
+            "kind": "link",
+            "url": "https://www.khanacademy.org/math/calculus-2/bc-series-new",
+            "name": "khanacademy.org/math/calculus-2/bc-ser…"
+          }
+        ]
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 20,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "t-flash",
+        "title": "Flashcards: cell cycle",
+        "subjectId": "s-bio",
+        "due": "2026-10-31"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 45,
+        "priority": "med",
+        "done": true,
+        "completedAt": "2026-10-31",
+        "id": "t-read9",
+        "title": "Read chapter 9",
+        "subjectId": "s-hist",
+        "due": "2026-10-31"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 40,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "t-poem",
+        "title": "Annotate two poems",
+        "subjectId": "s-eng",
+        "due": "2026-11-01",
+        "classId": "c-eng"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 120,
+        "priority": "high",
+        "done": false,
+        "completedAt": null,
+        "id": "t-pastpaper",
+        "title": "Past paper 2023 (mid-term prep)",
+        "subjectId": "s-math",
+        "due": "2026-11-02"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 50,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "t-optics",
+        "title": "Optics worksheet",
+        "subjectId": "s-phys",
+        "due": "2026-11-04"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 60,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "t-practical",
+        "title": "Revise practical techniques",
+        "subjectId": "s-bio",
+        "due": "2026-11-05",
+        "subtasks": [
+          {
+            "id": "st7",
+            "title": "Microscopy",
+            "done": false
+          },
+          {
+            "id": "st8",
+            "title": "Staining",
+            "done": false
+          },
+          {
+            "id": "st9",
+            "title": "Safety rules",
+            "done": false
+          }
+        ]
+      },
+      {
+        "time": null,
+        "notes": "1,500 words, Harvard referencing",
+        "estimate": 90,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "t-essay",
+        "title": "Partition essay: first draft",
+        "subjectId": "s-hist",
+        "due": "2026-11-07"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 15,
+        "priority": "low",
+        "done": false,
+        "completedAt": null,
+        "id": "t-vocab",
+        "title": "Vocabulary list: unit 6",
+        "subjectId": "s-eng",
+        "due": "2026-11-12"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 30,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "t-final-plan",
+        "title": "Make a revision plan for the history final",
+        "subjectId": "s-hist",
+        "due": "2026-11-20"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 60,
+        "priority": "med",
+        "done": true,
+        "completedAt": "2026-10-26",
+        "id": "t-done1",
+        "title": "Problem set 4: integrals",
+        "subjectId": "s-math",
+        "due": "2026-10-26"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 30,
+        "priority": "med",
+        "done": true,
+        "completedAt": "2026-10-27",
+        "id": "t-done2",
+        "title": "Microscope drawing",
+        "subjectId": "s-bio",
+        "due": "2026-10-27"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 40,
+        "priority": "med",
+        "done": true,
+        "completedAt": "2026-10-28",
+        "id": "t-done3",
+        "title": "Newton’s laws summary",
+        "subjectId": "s-phys",
+        "due": "2026-10-28"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 20,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "rca",
+        "title": "Daily flashcards",
+        "subjectId": "s-bio",
+        "due": "2026-10-31",
+        "recurId": "r-flash"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 20,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "rcb",
+        "title": "Daily flashcards",
+        "subjectId": "s-bio",
+        "due": "2026-11-01",
+        "recurId": "r-flash"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 20,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "rcc",
+        "title": "Daily flashcards",
+        "subjectId": "s-bio",
+        "due": "2026-11-02",
+        "recurId": "r-flash"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 20,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "rcd",
+        "title": "Daily flashcards",
+        "subjectId": "s-bio",
+        "due": "2026-11-03",
+        "recurId": "r-flash"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 20,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "rce",
+        "title": "Daily flashcards",
+        "subjectId": "s-bio",
+        "due": "2026-11-04",
+        "recurId": "r-flash"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 20,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "rcf",
+        "title": "Daily flashcards",
+        "subjectId": "s-bio",
+        "due": "2026-11-05",
+        "recurId": "r-flash"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 20,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "rcg",
+        "title": "Daily flashcards",
+        "subjectId": "s-bio",
+        "due": "2026-11-06",
+        "recurId": "r-flash"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 20,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "rch",
+        "title": "Daily flashcards",
+        "subjectId": "s-bio",
+        "due": "2026-11-07",
+        "recurId": "r-flash"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 20,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "rci",
+        "title": "Daily flashcards",
+        "subjectId": "s-bio",
+        "due": "2026-11-08",
+        "recurId": "r-flash"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 20,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "rcj",
+        "title": "Daily flashcards",
+        "subjectId": "s-bio",
+        "due": "2026-11-12",
+        "recurId": "r-flash"
+      },
+      {
+        "time": null,
+        "notes": "",
+        "estimate": 20,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "rck",
+        "title": "Daily flashcards",
+        "subjectId": "s-bio",
+        "due": "2026-11-13",
+        "recurId": "r-flash"
+      },
+      {
+        "time": "19:00",
+        "notes": "Look at the week ahead",
+        "estimate": 30,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "rcl",
+        "title": "Weekly planning",
+        "subjectId": null,
+        "due": "2026-11-01",
+        "recurId": "r-plan"
+      },
+      {
+        "time": "19:00",
+        "notes": "Look at the week ahead",
+        "estimate": 30,
+        "priority": "med",
+        "done": false,
+        "completedAt": null,
+        "id": "rcm",
+        "title": "Weekly planning",
+        "subjectId": null,
+        "due": "2026-11-08",
+        "recurId": "r-plan"
+      }
+    ],
+    "sessions": [
+      {
+        "id": "ssn",
+        "date": "2026-10-17",
+        "minutes": 25,
+        "subjectId": "s-math",
+        "taskId": "t-ps5",
+        "at": "09:40"
+      },
+      {
+        "id": "sso",
+        "date": "2026-10-18",
+        "minutes": 45,
+        "subjectId": "s-bio",
+        "taskId": "t-lab",
+        "at": "09:40"
+      },
+      {
+        "id": "ssp",
+        "date": "2026-10-18",
+        "minutes": 25,
+        "subjectId": "s-hist",
+        "taskId": "t-essay-plan",
+        "at": "14:15"
+      },
+      {
+        "id": "ssq",
+        "date": "2026-10-19",
+        "minutes": 25,
+        "subjectId": "s-hist",
+        "taskId": "t-essay-plan",
+        "at": "09:40"
+      },
+      {
+        "id": "ssr",
+        "date": "2026-10-19",
+        "minutes": 60,
+        "subjectId": "s-phys",
+        "taskId": "t-optics",
+        "at": "14:15"
+      },
+      {
+        "id": "sss",
+        "date": "2026-10-19",
+        "minutes": 25,
+        "subjectId": "s-eng",
+        "taskId": "t-poem",
+        "at": "20:30"
+      },
+      {
+        "id": "sst",
+        "date": "2026-10-20",
+        "minutes": 60,
+        "subjectId": "s-phys",
+        "taskId": "t-optics",
+        "at": "09:40"
+      },
+      {
+        "id": "ssu",
+        "date": "2026-10-21",
+        "minutes": 25,
+        "subjectId": "s-eng",
+        "taskId": "t-poem",
+        "at": "09:40"
+      },
+      {
+        "id": "ssv",
+        "date": "2026-10-21",
+        "minutes": 45,
+        "subjectId": "s-math",
+        "taskId": "t-ps5",
+        "at": "14:15"
+      },
+      {
+        "id": "ssw",
+        "date": "2026-10-24",
+        "minutes": 60,
+        "subjectId": "s-hist",
+        "taskId": "t-essay-plan",
+        "at": "09:40"
+      },
+      {
+        "id": "ssx",
+        "date": "2026-10-24",
+        "minutes": 25,
+        "subjectId": "s-phys",
+        "taskId": "t-optics",
+        "at": "14:15"
+      },
+      {
+        "id": "ssy",
+        "date": "2026-10-25",
+        "minutes": 25,
+        "subjectId": "s-phys",
+        "taskId": "t-optics",
+        "at": "09:40"
+      },
+      {
+        "id": "ssz",
+        "date": "2026-10-25",
+        "minutes": 45,
+        "subjectId": "s-eng",
+        "taskId": "t-poem",
+        "at": "14:15"
+      },
+      {
+        "id": "ss10",
+        "date": "2026-10-25",
+        "minutes": 25,
+        "subjectId": "s-math",
+        "taskId": "t-ps5",
+        "at": "20:30"
+      },
+      {
+        "id": "ss11",
+        "date": "2026-10-26",
+        "minutes": 45,
+        "subjectId": "s-eng",
+        "taskId": "t-poem",
+        "at": "09:40"
+      },
+      {
+        "id": "ss12",
+        "date": "2026-10-27",
+        "minutes": 25,
+        "subjectId": "s-math",
+        "taskId": "t-ps5",
+        "at": "09:40"
+      },
+      {
+        "id": "ss13",
+        "date": "2026-10-27",
+        "minutes": 60,
+        "subjectId": "s-bio",
+        "taskId": "t-lab",
+        "at": "14:15"
+      },
+      {
+        "id": "ss14",
+        "date": "2026-10-28",
+        "minutes": 60,
+        "subjectId": "s-bio",
+        "taskId": "t-lab",
+        "at": "09:40"
+      },
+      {
+        "id": "ss15",
+        "date": "2026-10-28",
+        "minutes": 25,
+        "subjectId": "s-hist",
+        "taskId": "t-essay-plan",
+        "at": "14:15"
+      },
+      {
+        "id": "ss16",
+        "date": "2026-10-28",
+        "minutes": 45,
+        "subjectId": "s-phys",
+        "taskId": "t-optics",
+        "at": "20:30"
+      },
+      {
+        "id": "ss17",
+        "date": "2026-10-29",
+        "minutes": 25,
+        "subjectId": "s-hist",
+        "taskId": "t-essay-plan",
+        "at": "09:40"
+      },
+      {
+        "id": "ss18",
+        "date": "2026-10-30",
+        "minutes": 45,
+        "subjectId": "s-phys",
+        "taskId": "t-optics",
+        "at": "09:40"
+      },
+      {
+        "id": "ss19",
+        "date": "2026-10-30",
+        "minutes": 25,
+        "subjectId": "s-eng",
+        "taskId": "t-poem",
+        "at": "14:15"
+      },
+      {
+        "id": "ss1a",
+        "date": "2026-10-31",
+        "minutes": 25,
+        "subjectId": "s-eng",
+        "taskId": "t-poem",
+        "at": "09:40"
+      },
+      {
+        "id": "ss1b",
+        "date": "2026-10-31",
+        "minutes": 60,
+        "subjectId": "s-math",
+        "taskId": "t-ps5",
+        "at": "14:15"
+      }
+    ],
+    "exams": [
+      {
+        "kind": "Test",
+        "time": "10:00",
+        "duration": 45,
+        "mode": "inPerson",
+        "building": "Exam hall",
+        "room": "",
+        "link": "",
+        "notes": "",
+        "id": "x-mathd",
+        "title": "Algebra diagnostic",
+        "subjectId": "s-math",
+        "date": "2026-09-13",
+        "score": 31,
+        "outOf": 50,
+        "weight": 1,
+        "attendance": "attended"
+      },
+      {
+        "kind": "Test",
+        "time": "10:00",
+        "duration": 40,
+        "mode": "inPerson",
+        "building": "Exam hall",
+        "room": "",
+        "link": "",
+        "notes": "",
+        "id": "x-mathh",
+        "title": "Functions homework test",
+        "subjectId": "s-math",
+        "date": "2026-09-24",
+        "score": 74,
+        "outOf": 100,
+        "weight": 1,
+        "attendance": "attended"
+      },
+      {
+        "kind": "Quiz",
+        "time": "10:00",
+        "duration": 20,
+        "mode": "inPerson",
+        "building": "Exam hall",
+        "room": "",
+        "link": "",
+        "notes": "",
+        "id": "x-bioq",
+        "title": "Microscopy quiz",
+        "subjectId": "s-bio",
+        "date": "2026-09-28",
+        "score": 16,
+        "outOf": 20,
+        "weight": 1,
+        "attendance": "attended"
+      },
+      {
+        "kind": "Essay",
+        "time": "10:00",
+        "duration": 60,
+        "mode": "inPerson",
+        "building": "Exam hall",
+        "room": "",
+        "link": "",
+        "notes": "",
+        "id": "x-histe",
+        "title": "Source essay",
+        "subjectId": "s-hist",
+        "date": "2026-09-21",
+        "score": 61,
+        "outOf": 100,
+        "weight": 1,
+        "attendance": "attended"
+      },
+      {
+        "kind": "Quiz",
+        "time": "10:00",
+        "duration": 30,
+        "mode": "inPerson",
+        "building": "Exam hall",
+        "room": "",
+        "link": "",
+        "notes": "",
+        "id": "x-mathq1",
+        "title": "Calculus quiz 1",
+        "subjectId": "s-math",
+        "date": "2026-10-05",
+        "score": 18,
+        "outOf": 20,
+        "weight": 1,
+        "attendance": "attended"
+      },
+      {
+        "kind": "Test",
+        "time": "10:00",
+        "duration": 60,
+        "mode": "inPerson",
+        "building": "Exam hall",
+        "room": "",
+        "link": "",
+        "notes": "",
+        "id": "x-biot1",
+        "title": "Cell biology test",
+        "subjectId": "s-bio",
+        "date": "2026-10-12",
+        "score": 41,
+        "outOf": 50,
+        "weight": 1,
+        "attendance": "attended"
+      },
+      {
+        "kind": "Midterm",
+        "time": "10:00",
+        "duration": 120,
+        "mode": "inPerson",
+        "building": "Exam hall",
+        "room": "",
+        "link": "",
+        "notes": "",
+        "id": "x-histm",
+        "title": "History mid-term",
+        "subjectId": "s-hist",
+        "date": "2026-10-16",
+        "score": 68,
+        "outOf": 100,
+        "weight": 2,
+        "attendance": "attended"
+      },
+      {
+        "kind": "Presentation",
+        "time": "10:00",
+        "duration": 20,
+        "mode": "inPerson",
+        "building": "Exam hall",
+        "room": "",
+        "link": "",
+        "notes": "",
+        "id": "x-engp",
+        "title": "Poetry presentation",
+        "subjectId": "s-eng",
+        "date": "2026-10-19",
+        "score": 17,
+        "outOf": 20,
+        "weight": 1,
+        "attendance": "attended"
+      },
+      {
+        "kind": "Quiz",
+        "time": "10:00",
+        "duration": 30,
+        "mode": "inPerson",
+        "building": "Exam hall",
+        "room": "",
+        "link": "",
+        "notes": "Was ill",
+        "id": "x-physq",
+        "title": "Optics quiz",
+        "subjectId": "s-phys",
+        "date": "2026-10-22",
+        "attendance": "missed"
+      },
+      {
+        "kind": "Quiz",
+        "time": "10:00",
+        "duration": 30,
+        "mode": "inPerson",
+        "building": "Exam hall",
+        "room": "",
+        "link": "",
+        "notes": "",
+        "id": "x-engq",
+        "title": "Grammar quiz",
+        "subjectId": "s-eng",
+        "date": "2026-10-24",
+        "attendance": "excused"
+      },
+      {
+        "kind": "Quiz",
+        "time": "10:00",
+        "duration": 30,
+        "mode": "inPerson",
+        "building": "Exam hall",
+        "room": "",
+        "link": "",
+        "notes": "",
+        "id": "x-mathq2",
+        "title": "Calculus quiz 2",
+        "subjectId": "s-math",
+        "date": "2026-10-29"
+      },
+      {
+        "kind": "Midterm",
+        "time": "10:00",
+        "duration": 90,
+        "mode": "inPerson",
+        "building": "Hall B",
+        "room": "Seat 42",
+        "link": "",
+        "notes": "",
+        "id": "x-calcm",
+        "title": "Calculus mid-term",
+        "subjectId": "s-math",
+        "date": "2026-11-03"
+      },
+      {
+        "kind": "Practical",
+        "time": "14:00",
+        "duration": 120,
+        "mode": "inPerson",
+        "building": "Lab 3",
+        "room": "",
+        "link": "",
+        "notes": "",
+        "id": "x-biop",
+        "title": "Biology practical",
+        "subjectId": "s-bio",
+        "date": "2026-11-06"
+      },
+      {
+        "kind": "Midterm",
+        "time": "09:30",
+        "duration": 90,
+        "mode": "inPerson",
+        "building": "Exam hall",
+        "room": "",
+        "link": "",
+        "notes": "",
+        "id": "x-physm",
+        "title": "Physics mid-term",
+        "subjectId": "s-phys",
+        "date": "2026-11-13"
+      },
+      {
+        "kind": "Final",
+        "time": "09:00",
+        "duration": 180,
+        "mode": "inPerson",
+        "building": "Exam hall",
+        "room": "",
+        "link": "",
+        "notes": "Chapters 1–12",
+        "id": "x-histf",
+        "title": "History final",
+        "subjectId": "s-hist",
+        "date": "2026-12-11"
+      }
+    ],
+    "recurring": [
+      {
+        "id": "r-flash",
+        "title": "Daily flashcards",
+        "subjectId": "s-bio",
+        "time": null,
+        "notes": "",
+        "estimate": 20,
+        "priority": "med",
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "startDate": "2026-10-17",
+        "generatedUntil": "2026-11-13"
+      },
+      {
+        "id": "r-plan",
+        "title": "Weekly planning",
+        "subjectId": null,
+        "time": "19:00",
+        "notes": "Look at the week ahead",
+        "estimate": 30,
+        "priority": "med",
+        "days": [
+          0
+        ],
+        "startDate": "2026-10-17",
+        "generatedUntil": "2026-11-13"
+      }
+    ],
+    "classes": [
+      {
+        "teacher": "Prof. Rao",
+        "repeat": "weekly",
+        "date": null,
+        "range": "term",
+        "rangeStart": null,
+        "rangeEnd": null,
+        "mode": "inPerson",
+        "location": "Room 204",
+        "link": "",
+        "notes": "",
+        "createdAt": "2026-09-01",
+        "id": "c-calc",
+        "title": "Calculus II",
+        "subjectId": "s-math",
+        "days": [
+          1,
+          3
+        ],
+        "start": "09:00",
+        "end": "10:30",
+        "attendance": {
+          "2026-09-21": "attended",
+          "2026-09-23": "attended",
+          "2026-09-28": "attended",
+          "2026-09-30": "attended",
+          "2026-10-05": "attended",
+          "2026-10-12": "attended",
+          "2026-10-14": "attended",
+          "2026-10-19": "attended",
+          "2026-10-21": "missed",
+          "2026-10-26": "attended",
+          "2026-10-28": "attended"
+        }
+      },
+      {
+        "teacher": "Dr. Mehta",
+        "repeat": "weekly",
+        "date": null,
+        "range": "term",
+        "rangeStart": null,
+        "rangeEnd": null,
+        "mode": "inPerson",
+        "location": "Lab 3",
+        "link": "",
+        "notes": "",
+        "createdAt": "2026-09-01",
+        "id": "c-bio",
+        "title": "Cell Biology",
+        "subjectId": "s-bio",
+        "days": [
+          2,
+          4
+        ],
+        "start": "11:00",
+        "end": "12:00",
+        "attendance": {
+          "2026-09-22": "attended",
+          "2026-09-24": "attended",
+          "2026-09-29": "attended",
+          "2026-10-01": "excused",
+          "2026-10-06": "attended",
+          "2026-10-13": "attended",
+          "2026-10-15": "missed",
+          "2026-10-20": "attended",
+          "2026-10-22": "attended",
+          "2026-10-27": "attended"
+        }
+      },
+      {
+        "teacher": "Ms. Das",
+        "repeat": "weekly",
+        "date": null,
+        "range": "term",
+        "rangeStart": null,
+        "rangeEnd": null,
+        "mode": "inPerson",
+        "location": "Hall B",
+        "link": "",
+        "notes": "",
+        "createdAt": "2026-09-01",
+        "id": "c-hist",
+        "title": "Modern History",
+        "subjectId": "s-hist",
+        "days": [
+          1,
+          5
+        ],
+        "start": "13:00",
+        "end": "14:00",
+        "attendance": {
+          "2026-09-21": "attended",
+          "2026-09-25": "attended",
+          "2026-09-28": "missed",
+          "2026-10-02": "attended",
+          "2026-10-05": "attended",
+          "2026-10-12": "missed",
+          "2026-10-16": "attended",
+          "2026-10-19": "attended",
+          "2026-10-23": "missed",
+          "2026-10-26": "attended"
+        }
+      },
+      {
+        "teacher": "Dr. Iyer",
+        "repeat": "weekly",
+        "date": null,
+        "range": "term",
+        "rangeStart": null,
+        "rangeEnd": null,
+        "mode": "inPerson",
+        "location": "Physics Lab 1",
+        "link": "",
+        "notes": "",
+        "createdAt": "2026-09-01",
+        "id": "c-phys",
+        "title": "Physics Lab",
+        "subjectId": "s-phys",
+        "days": [
+          3
+        ],
+        "start": "14:00",
+        "end": "16:00",
+        "attendance": {
+          "2026-09-23": "attended",
+          "2026-09-30": "attended",
+          "2026-10-14": "cancelled",
+          "2026-10-21": "attended",
+          "2026-10-28": "attended"
+        }
+      },
+      {
+        "teacher": "Mr. Thomas",
+        "repeat": "weekly",
+        "date": null,
+        "range": "term",
+        "rangeStart": null,
+        "rangeEnd": null,
+        "mode": "online",
+        "location": "",
+        "link": "https://meet.example.com/eng-lit",
+        "notes": "",
+        "createdAt": "2026-09-01",
+        "id": "c-eng",
+        "title": "English Literature",
+        "subjectId": "s-eng",
+        "days": [
+          2
+        ],
+        "start": "15:00",
+        "end": "16:00",
+        "attendance": {
+          "2026-09-22": "attended",
+          "2026-09-29": "attended",
+          "2026-10-06": "attended",
+          "2026-10-13": "attended",
+          "2026-10-20": "attended",
+          "2026-10-27": "attended"
+        }
+      },
+      {
+        "teacher": "",
+        "repeat": "once",
+        "date": "2026-11-06",
+        "range": "none",
+        "rangeStart": null,
+        "rangeEnd": null,
+        "mode": "inPerson",
+        "location": "Auditorium",
+        "link": "",
+        "notes": "",
+        "createdAt": "2026-09-01",
+        "id": "c-guest",
+        "title": "Guest lecture: Climate & cells",
+        "subjectId": "s-bio",
+        "days": [],
+        "start": "16:00",
+        "end": "17:00"
+      },
+      {
+        "teacher": "Coach Singh",
+        "repeat": "weekly",
+        "date": null,
+        "range": "none",
+        "rangeStart": null,
+        "rangeEnd": null,
+        "mode": "inPerson",
+        "location": "North field",
+        "link": "",
+        "notes": "",
+        "createdAt": "2026-10-01",
+        "subjectId": null,
+        "kind": "activity",
+        "id": "a-football",
+        "title": "Football practice",
+        "category": "sport",
+        "days": [
+          2,
+          4
+        ],
+        "start": "17:30",
+        "end": "19:00"
+      },
+      {
+        "teacher": "Anita (manager)",
+        "repeat": "weekly",
+        "date": null,
+        "range": "none",
+        "rangeStart": null,
+        "rangeEnd": null,
+        "mode": "inPerson",
+        "location": "Bean There Cafe",
+        "link": "",
+        "notes": "",
+        "createdAt": "2026-10-01",
+        "subjectId": null,
+        "kind": "activity",
+        "id": "a-cafe",
+        "title": "Cafe shift",
+        "category": "work",
+        "days": [
+          3,
+          6
+        ],
+        "start": "18:00",
+        "end": "21:00"
+      },
+      {
+        "teacher": "",
+        "repeat": "weekly",
+        "date": null,
+        "range": "none",
+        "rangeStart": null,
+        "rangeEnd": null,
+        "mode": "inPerson",
+        "location": "Room 12",
+        "link": "",
+        "notes": "",
+        "createdAt": "2026-10-01",
+        "subjectId": null,
+        "kind": "activity",
+        "id": "a-chess",
+        "title": "Chess club",
+        "category": "club",
+        "days": [
+          5
+        ],
+        "start": "16:30",
+        "end": "17:30"
+      },
+      {
+        "teacher": "",
+        "repeat": "weekly",
+        "date": null,
+        "range": "none",
+        "rangeStart": null,
+        "rangeEnd": null,
+        "mode": "inPerson",
+        "location": "Music room",
+        "link": "",
+        "notes": "",
+        "createdAt": "2026-10-01",
+        "subjectId": null,
+        "kind": "activity",
+        "id": "a-choir",
+        "title": "College choir",
+        "category": "arts",
+        "days": [
+          1
+        ],
+        "start": "18:00",
+        "end": "19:00"
+      },
+      {
+        "teacher": "",
+        "repeat": "once",
+        "date": "2026-11-08",
+        "range": "none",
+        "rangeStart": null,
+        "rangeEnd": null,
+        "mode": "inPerson",
+        "location": "Puri beach",
+        "link": "",
+        "notes": "",
+        "createdAt": "2026-10-01",
+        "subjectId": null,
+        "kind": "activity",
+        "id": "a-volunteer",
+        "title": "Beach clean-up",
+        "category": "volunteer",
+        "days": [],
+        "start": "07:00",
+        "end": "10:00"
+      }
+    ],
+    "term": {
+      "start": "2026-09-01",
+      "end": "2026-12-20"
+    },
+    "vacations": [
+      {
+        "id": "v-midterm",
+        "title": "Mid-term break",
+        "start": "2026-10-07",
+        "end": "2026-10-09",
+        "pause": true,
+        "notes": ""
+      },
+      {
+        "id": "v-diwali",
+        "title": "Diwali break",
+        "start": "2026-11-09",
+        "end": "2026-11-11",
+        "pause": true,
+        "notes": "Home for the festival"
+      },
+      {
+        "id": "v-winter",
+        "title": "Winter break",
+        "start": "2026-12-22",
+        "end": "2027-01-05",
+        "pause": true,
+        "notes": ""
+      }
+    ],
+    "rotation": null,
+    "groups": []
+  }
+}

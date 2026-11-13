@@ -39,3 +39,13 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+e2e/shots/
+e2e/results.json
+e2e/results-partial.json
+expo-go-qr.png
+
+# made for the Development Supabase project by scripts/dev-setup-sql.mjs (regenerate rather than keep)
+supabase/dev-setup.sql
+
+# written by scripts/seed-demo.mjs: the demo Physics group link for the screenshot scripts
+scripts/.demo-group-link

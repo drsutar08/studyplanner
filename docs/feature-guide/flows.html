@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Study Planner flows</title>
+<style>
+  :root { --ink:#151B33; --muted:#5C6482; --line:#C9D0FF; --blue:#3B4CCA; --soft:#E3E7FA; --green:#157A52; --gsoft:#DDF3EA; --amber:#8A5A0F; --asoft:#FFEFD6; --violet:#5B3FD9; --vsoft:#EFEAFF; --red:#B93636; --rsoft:#FBE4E4; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: #fff; font-family: "Segoe UI", Arial, sans-serif; color: var(--ink); }
+  .flow { width: 1200px; padding: 28px 32px 32px; margin-bottom: 40px; border: 1px solid #DDE2EE; border-radius: 20px; background: #FAFBFF; }
+  h2 { margin: 0 0 4px; font-size: 26px; }
+  .sub { margin: 0 0 22px; color: var(--muted); font-size: 15px; }
+  .row { display: flex; align-items: center; justify-content: center; gap: 0; }
+  .col { display: flex; flex-direction: column; align-items: center; }
+  .box { width: 200px; min-height: 86px; padding: 12px 14px; border-radius: 14px; border: 2px solid var(--line); background: #fff; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+  .box b { font-size: 15px; display: block; margin-bottom: 3px; }
+  .box span { font-size: 12.5px; color: var(--muted); line-height: 1.35; }
+  .start { background: var(--blue); border-color: var(--blue); }
+  .start b, .start span { color: #fff; }
+  .blue { background: var(--soft); border-color: var(--blue); }
+  .green { background: var(--gsoft); border-color: var(--green); }
+  .amber { background: var(--asoft); border-color: var(--amber); }
+  .violet { background: var(--vsoft); border-color: var(--violet); }
+  .red { background: var(--rsoft); border-color: var(--red); }
+  .diamond { width: 200px; min-height: 86px; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 700; font-size: 14px; background: #FFF8E7; border: 2px dashed var(--amber); border-radius: 40px; padding: 10px; }
+  .arrow { display: flex; align-items: center; justify-content: center; width: 54px; color: var(--blue); font-size: 30px; font-weight: 700; }
+  .down { height: 40px; width: auto; font-size: 28px; }
+  .label { font-size: 11.5px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 6px; }
+  .grid .box { width: auto; }
+  .legend { margin-top: 18px; font-size: 13px; color: var(--muted); }
+  .split { display: flex; gap: 16px; justify-content: center; }
+  .tag { display: inline-block; margin-top: 6px; padding: 2px 8px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-size: 11px; color: var(--blue); font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- 1. the user's journey -->
+<div class="flow" id="journey">
+  <h2>1. Using the app: from opening it to studying</h2>
+  <p class="sub">What a student sees, step by step. Works on the web, Android and iPhone.</p>
+  <div class="row">
+    <div class="box start"><b>Open the app</b><span>Splash screen</span></div>
+    <div class="arrow">→</div>
+    <div class="box"><b>Welcome slides</b><span>What the app does (can be skipped)</span></div>
+    <div class="arrow">→</div>
+    <div class="diamond">Has an account?</div>
+    <div class="arrow">→</div>
+    <div class="col">
+      <div class="box blue"><b>Sign in</b><span>Email + password · “Forgot password?” sends a reset email</span></div>
+      <div class="label" style="margin:6px 0">or</div>
+      <div class="box blue"><b>Create account</b><span>Name, email, password · optional sample data · welcome email</span></div>
+    </div>
+  </div>
+  <div class="row"><div class="arrow down">↓</div></div>
+  <div class="row">
+    <div class="diamond">First time on this device?</div>
+    <div class="arrow">→</div>
+    <div class="col">
+      <div class="box green"><b>Yes: download your plans</b><span>From the cloud, in a few seconds</span></div>
+      <div class="label" style="margin:6px 0">no internet?</div>
+      <div class="box amber"><b>“Start offline”</b><span>Use it now; your plans merge in when back online</span></div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="box start"><b>Dashboard</b><span>Today’s tasks, classes, exams, smart plan</span></div>
+  </div>
+  <div class="row"><div class="arrow down">↓</div></div>
+  <div class="grid">
+    <div class="box blue"><b>Calendar</b><span>Month / week · exams · timetable · breaks · prep plans</span></div>
+    <div class="box blue"><b>Focus timer</b><span>Pomodoro sessions, streaks, keeps the screen on</span></div>
+    <div class="box blue"><b>Subjects</b><span>Progress, weekly goals, grades and attendance per subject</span></div>
+    <div class="box blue"><b>Progress</b><span>Charts · weekly review · grades · what-if · attendance</span></div>
+    <div class="box blue"><b>Settings</b><span>Reminders · theme · language · study groups · backup · account</span></div>
+  </div>
+</div>
+
+<!-- 2. the study loop -->
+<div class="flow" id="study">
+  <h2>2. The study loop: plan, do, review</h2>
+  <p class="sub">How the planning features work together during a week.</p>
+  <div class="row">
+    <div class="box start"><b>Add an exam</b><span>Date, time, place, subject</span></div>
+    <div class="arrow">→</div>
+    <div class="box violet"><b>Exam prep plan</b><span>Revision tasks spread over the days before it, with a practice test and final review</span></div>
+    <div class="arrow">→</div>
+    <div class="box blue"><b>Tasks for each day</b><span>Also homework from classes, repeating tasks, steps and links</span></div>
+    <div class="arrow">→</div>
+    <div class="box blue"><b>Smart plan</b><span>Picks what to do today to fit the daily goal, most urgent first</span></div>
+  </div>
+  <div class="row"><div class="arrow down">↓</div></div>
+  <div class="row">
+    <div class="box green"><b>Weekly review</b><span>What got done, what slipped · move overdue tasks in one tap</span></div>
+    <div class="arrow">←</div>
+    <div class="box green"><b>Progress</b><span>Focus time, streaks, grades, attendance, weekly report</span></div>
+    <div class="arrow">←</div>
+    <div class="box blue"><b>Focus timer</b><span>Study in sessions · each one is logged</span></div>
+    <div class="arrow">←</div>
+    <div class="box amber"><b>Reminders</b><span>Tasks due · exams · classes · smart reminder at your usual study time</span></div>
+  </div>
+  <p class="legend">The review feeds the next week’s plan: rescheduled tasks go back on the calendar, and the cycle starts again.</p>
+</div>
+
+<!-- 3. sync -->
+<div class="flow" id="sync">
+  <h2>3. Your data: saved on the device, synced through the cloud</h2>
+  <p class="sub">Every change is kept on the device first, so the app always works, then sent to the cloud for your other devices.</p>
+  <div class="row">
+    <div class="box start"><b>You change something</b><span>Add a task, tick it off, edit a class…</span></div>
+    <div class="arrow">→</div>
+    <div class="box blue"><b>Saved on this device</b><span>Instantly, even offline</span></div>
+    <div class="arrow">→</div>
+    <div class="diamond">Online?</div>
+    <div class="arrow">→</div>
+    <div class="box green"><b>Sent to the cloud</b><span>In about 1–2 seconds · private to your account</span></div>
+    <div class="arrow">→</div>
+    <div class="box green"><b>Your other devices</b><span>Update live · edits on both are merged field by field</span></div>
+  </div>
+  <div class="row"><div class="arrow down">↓ <span style="font-size:13px;margin-left:8px;color:#5C6482">offline</span></div></div>
+  <div class="row">
+    <div class="box amber"><b>Orange “not synced” dot</b><span>Settings shows how many changes are waiting</span></div>
+    <div class="arrow">→</div>
+    <div class="box blue"><b>Back online</b><span>Waiting changes go up automatically</span></div>
+    <div class="arrow">→</div>
+    <div class="box violet"><b>Nightly backup</b><span>A copy every night, kept 14 days · one account can be restored</span></div>
+    <div class="arrow">→</div>
+    <div class="box red"><b>Error reports</b><span>Unexpected errors are reported to the developer, privately</span></div>
+  </div>
+</div>
+
+<!-- 4. study groups -->
+<div class="flow" id="groups">
+  <h2>4. Live study groups</h2>
+  <p class="sub">Share a timetable with classmates. They get your classes, exams and breaks, and see changes as you make them. Private things (attendance, scores, notes, tasks) are never shared.</p>
+  <div class="row">
+    <div class="box start"><b>Owner: “Create live link”</b><span>Choose what to share · up to 10 groups</span></div>
+    <div class="arrow">→</div>
+    <div class="box blue"><b>Send the link or QR code</b><span>Copy, share, or scan</span></div>
+    <div class="arrow">→</div>
+    <div class="box blue"><b>Classmate opens it</b><span>Sees what it adds, then “Join group” · up to 200 members</span></div>
+    <div class="arrow">→</div>
+    <div class="box green"><b>Timetable added</b><span>Classes, exams and breaks in their calendar</span></div>
+  </div>
+  <div class="row"><div class="arrow down">↓</div></div>
+  <div class="split">
+    <div class="box green" style="width:260px"><b>Owner changes the timetable</b><span>Members’ copies update by themselves</span></div>
+    <div class="box violet" style="width:260px"><b>Board: notes</b><span>“Test moved to Friday”, pinned for all · members get a pop-up</span></div>
+    <div class="box violet" style="width:260px"><b>Board: shared tasks</b><span>Each member gets their own copy to tick off · edits and removals follow</span></div>
+    <div class="box red" style="width:260px"><b>Stop sharing / Leave</b><span>The owner can end the group; a member can leave any time</span></div>
+  </div>
+</div>
+
+</body>
+</html>

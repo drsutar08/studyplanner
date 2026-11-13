@@ -1,0 +1,81 @@
+// Translated from ../en/common.js
+export default {
+  common: {
+    today: 'Hoy',
+    tomorrow: 'Mañana',
+    yesterday: 'Ayer',
+    inDays: { one: 'en {count} día', other: 'en {count} días' },
+    daysAgo: { one: 'hace {count} día', other: 'hace {count} días' },
+    save: 'Guardar',
+    saveChanges: 'Guardar cambios',
+    cancel: 'Cancelar',
+    delete: 'Eliminar',
+    edit: 'Editar',
+    undo: 'Deshacer',
+    close: 'Cerrar',
+    closeSheet: 'Cerrar panel',
+    optional: 'Opcional',
+    none: 'Ninguno',
+    noSubject: 'Sin materia',
+    minutes: '{count} min',
+  },
+  days: {
+    long: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+    short: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
+    narrow: ['D', 'L', 'M', 'X', 'J', 'V', 'S'],
+  },
+  // Widget de la pantalla de inicio (fuera de la app, mantener corto)
+  // Long-press shortcuts on the app icon (appShortcutLinks.js)
+  appShortcuts: {
+    newTask: 'Nueva tarea',
+    focus: 'Empezar a concentrarte',
+    cards: 'Repasar tarjetas',
+  },
+  widget: {
+    nextClass: 'PRÓXIMA CLASE',
+    empty: 'No hay más clases hoy',
+    now: 'AHORA',
+    online: 'En línea',
+    dayTime: '{day} · {time}',
+    // the "Today" widget
+    today: 'HOY',
+    tasksLeft: { one: 'Queda 1 tarea', other: 'Quedan {count} tareas' },
+    allDone: 'Todo hecho por hoy',
+    overdue: { one: '1 atrasada', other: '{count} atrasadas' },
+    focus: '{done} / {goal} min de concentración',
+    cards: { one: '1 tarjeta para repasar', other: '{count} tarjetas para repasar' },
+    openToSee: 'Abre la app para ver tu día',
+  },
+  // Botones de las notificaciones de recordatorio de tareas
+  reminderActions: {
+    done: 'Marcar hecha',
+    snooze: 'Posponer 1 hora',
+    snoozedTitle: 'Recordatorio',
+  },
+  months: {
+    long: ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
+    short: ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sept', 'oct', 'nov', 'dic'],
+  },
+  dateFormats: {
+    wdm: '{weekday}, {day} de {month}',
+    wdmy: '{weekday}, {day} de {month} de {year}',
+    dm: '{day} {month}',
+    dmy: '{day} de {month} de {year}',
+    my: '{month} de {year}',
+    m: '{month}',
+    w: '{weekday}',
+  },
+  appearance: {
+    title: 'Apariencia',
+    theme: 'Tema',
+    themeSystem: 'Sistema',
+    themeLight: 'Claro',
+    themeDark: 'Oscuro',
+    themeHint: '“Sistema” sigue el modo claro u oscuro de tu teléfono.',
+    language: 'Idioma',
+    languageSystem: 'Sistema',
+    languageHint: '“Sistema” usa el idioma de tu teléfono si la app lo tiene; si no, inglés.',
+    themeA11y: 'Tema: {name}',
+    languageA11y: 'Idioma: {name}',
+  },
+};
