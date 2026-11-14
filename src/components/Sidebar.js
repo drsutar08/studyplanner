@@ -21,6 +21,7 @@ export const NAV = [
   { name: 'Focus', labelKey: 'nav.focus', icon: ['timer', 'timer-outline'] },
   { name: 'Subjects', labelKey: 'nav.subjects', icon: ['library', 'library-outline'] },
   { name: 'Flashcards', labelKey: 'nav.flashcards', icon: ['albums', 'albums-outline'] },
+  { name: 'Classrooms', labelKey: 'nav.classrooms', icon: ['school', 'school-outline'] },
   { name: 'Progress', labelKey: 'nav.progress', icon: ['stats-chart', 'stats-chart-outline'] },
   { name: 'Profile', labelKey: 'nav.profile', icon: ['person', 'person-outline'], hidden: true },
   { name: 'Settings', labelKey: 'nav.settings', icon: ['settings', 'settings-outline'], hidden: true },

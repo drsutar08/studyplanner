@@ -23,7 +23,8 @@ import { useGroupActions } from './src/groupActions';
 import { useToast } from './src/toast';
 import { useLiveGroups } from './src/cloud/liveGroups';
 import { useGroupBoards } from './src/cloud/groupBoard';
-import { useClassroomAlerts } from './src/cloud/classrooms';
+import { useClassroomAlerts, useClassroomList, useClassroomSeen } from './src/cloud/classrooms';
+import { classroomBadge } from './src/classrooms';
 import { useStudyTogether } from './src/cloud/studyTogether';
 import { usePlanLoader } from './src/cloud/plan';
 import { startPurchases, endPurchases } from './src/purchases';
@@ -37,6 +38,7 @@ import TodayScreen from './src/screens/TodayScreen';
 import FocusScreen from './src/screens/FocusScreen';
 import SubjectsScreen from './src/screens/SubjectsScreen';
 import FlashcardsScreen from './src/screens/FlashcardsScreen';
+import ClassroomsScreen from './src/screens/ClassroomsScreen';
 import CalendarScreen from './src/screens/CalendarScreen';
 import { onlyClasses } from './src/classes';
 import ProgressScreen from './src/screens/ProgressScreen';
@@ -283,6 +285,8 @@ function Shell({ route }) {
     minutes: state.sessions.filter((s) => s.date === today).reduce((a, s) => a + s.minutes, 0),
   };
 
+  const classroomList = useClassroomList();
+  const classroomSeen = useClassroomSeen();
   const sidebar = (
     <Sidebar
       route={route}
@@ -292,7 +296,7 @@ function Shell({ route }) {
         setDrawer(false);
         setAdding(true);
       }}
-      badges={{ Today: settings.reminders ? alerts.length : 0 }}
+      badges={{ Today: settings.reminders ? alerts.length : 0, Classrooms: classroomBadge(classroomList, classroomSeen) }}
       subjects={state.subjects.map((s) => ({ ...s, open: state.tasks.filter((t) => t.subjectId === s.id && !t.done).length }))}
       today={todayStats}
       topInset={insets.top}
@@ -344,6 +348,7 @@ function Shell({ route }) {
             <Tab.Screen name="Focus" component={FocusScreen} />
             <Tab.Screen name="Subjects" component={SubjectsScreen} />
             <Tab.Screen name="Flashcards" component={FlashcardsScreen} options={hiddenTab} />
+            <Tab.Screen name="Classrooms" component={ClassroomsScreen} options={hiddenTab} />
             <Tab.Screen name="Progress" component={ProgressScreen} />
             <Tab.Screen name="Profile" component={ProfileScreen} options={hiddenTab} />
             <Tab.Screen name="Settings" component={SettingsScreen} options={hiddenTab} />

@@ -35,8 +35,9 @@ accounts can't change it.
   You can turn it off in **Settings → Study groups**.
 - **Classrooms.** When you ask to join a classroom, its teacher sees your name (never your email, tasks or grades)
   and decides whether to approve you. Students in a classroom never see each other. A teacher's name and the
-  materials they share are seen only by the students they approved. A report you send about a classroom goes to
-  the Studyly team, not to the teacher.
+  materials they share are seen only by the students they approved. If you report a material, its teacher sees the
+  report but not your name; a report about a whole classroom goes only to the Studyly team, which sees who sent
+  every report.
 - **Progress reports** go only to the person you send them to, by the app you choose to share with.
 - **The AI helper**, only when you use it. See below.
 

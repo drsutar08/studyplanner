@@ -18,6 +18,7 @@ export default {
     focus: 'Focus Timer',
     subjects: 'Subjects',
     flashcards: 'Flashcards',
+    classrooms: 'Classrooms',
     progress: 'Progress',
     profile: 'My Profile',
     settings: 'Settings',

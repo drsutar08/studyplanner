@@ -18,6 +18,7 @@ export default {
     focus: 'ଫୋକସ୍ ଟାଇମର୍',
     subjects: 'ବିଷୟ',
     flashcards: 'ଫ୍ଲାସକାର୍ଡ',
+    classrooms: 'କ୍ଲାସରୁମ୍',
     progress: 'ପ୍ରଗତି',
     profile: 'ମୋ ପ୍ରୋଫାଇଲ୍',
     settings: 'ସେଟିଂସ୍',

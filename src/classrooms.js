@@ -110,18 +110,39 @@ export const classroomErrorKind = (e) => {
   if (/classroom_full/.test(s)) return 'full';
   if (/own_classroom/.test(s)) return 'own';
   if (/materials_full/.test(s)) return 'materialsFull';
+  if (/too_many_reports/.test(s)) return 'tooManyReports';
+  if (/not_allowed|no_material/.test(s)) return 'storage';
   if (/row-level security|violates row-level|unauthorized|403/i.test(s)) return 'storage';
   if (/too large|exceeded the maximum|payload too large|413/i.test(s)) return 'tooBig';
   if (/mime type|invalid_mime/i.test(s)) return 'type';
   return 'offline';
 };
 
-// The Settings row's line: "Teaching 2 · Joined 1 · 3 waiting"
+// The Settings row's line: "Teaching 1 classroom · 12 students · 3 waiting · Joined 1 classroom"
 export const summary = (list) => {
   const all = list || [];
+  const teaching = all.filter((c) => c.role === 'teacher');
+  const sum = (key) => teaching.reduce((n, c) => n + (c[key] || 0), 0);
   return {
-    teaching: all.filter((c) => c.role === 'teacher').length,
-    joined: all.filter((c) => c.role === 'student').length,
-    waiting: all.filter((c) => c.role === 'teacher').reduce((n, c) => n + (c.pending || 0), 0),
+    teaching: teaching.length,
+    students: sum('students'),
+    waiting: sum('pending'),
+    reports: sum('reports'),
+    joined: all.filter((c) => c.role === 'student' && c.status === 'approved').length,
+    requested: all.filter((c) => c.role === 'student' && c.status === 'pending').length,
   };
 };
+// The menu's badge: join requests and open reports to look at, plus classrooms with new materials
+export const classroomBadge = (list, seen = {}) =>
+  (list || []).reduce((n, c) => n + (c.role === 'teacher' ? (c.pending || 0) + (c.reports || 0) : hasNew(c, seen[c.id]) ? 1 : 0), 0);
+
+// Which parts of the summary the row shows, in order: [key, count]. Empty: nothing yet.
+export const summaryParts = (s) =>
+  [
+    s.teaching ? ['rowTeaching', s.teaching] : null,
+    s.teaching ? ['studentsCount', s.students] : null,
+    s.waiting ? ['rowWaiting', s.waiting] : null,
+    s.reports ? ['rowReports', s.reports] : null,
+    s.joined ? ['rowJoined', s.joined] : null,
+    s.requested ? ['rowRequested', s.requested] : null,
+  ].filter(Boolean);

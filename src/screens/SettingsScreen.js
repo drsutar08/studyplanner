@@ -19,10 +19,6 @@ import RestoreSheet from '../components/RestoreSheet';
 import ImportCalendarSheet from '../components/ImportCalendarSheet';
 import ArchiveSheet from '../components/ArchiveSheet';
 import GroupBoardSheet from '../components/GroupBoardSheet';
-import ClassroomsSheet from '../components/ClassroomsSheet';
-import { useClassroomList } from '../cloud/classrooms';
-import { summary as classroomSummary } from '../classrooms';
-import { cloudConfigured } from '../cloud/supabase';
 import PrivacySheet from '../components/PrivacySheet';
 import { openPremium } from '../components/PremiumSheet';
 import { usePlan } from '../cloud/plan';
@@ -73,9 +69,6 @@ export default function SettingsScreen({ navigation }) {
   const [sharing, setSharing] = useState(false);
   const [privacyOpen, setPrivacyOpen] = useState(false); // Privacy & data
   const [board, setBoard] = useState(null); // a joined live group whose board is open
-  const [classroomsOpen, setClassroomsOpen] = useState(false);
-  const classrooms = useClassroomList();
-  const rooms = classroomSummary(classrooms);
   const [archiving, setArchiving] = useState(false);
   // accounts from the older (on-device) version still on this device
   const [legacy, setLegacy] = useState([]);
@@ -403,23 +396,6 @@ export default function SettingsScreen({ navigation }) {
           ))}
         </Section>
 
-        {cloudConfigured && user ? (
-          <Section title={t('classroom.section')}>
-            <Row
-              icon="school-outline"
-              tint={colors.accent}
-              label={t('classroom.row')}
-              sub={
-                rooms.teaching || rooms.joined
-                  ? [t('classroom.rowCounts', rooms), rooms.waiting ? t('classroom.rowWaiting', { count: rooms.waiting }) : null].filter(Boolean).join(' · ')
-                  : t('classroom.rowSub')
-              }
-              last
-              onPress={() => setClassroomsOpen(true)}
-            />
-          </Section>
-        ) : null}
-
         <Section title={t('settings.data')}>
           <Row icon="shield-checkmark-outline" tint="#157A52" label={t('privacy.row')} sub={t('privacy.rowSub')} onPress={() => setPrivacyOpen(true)} />
           <Row icon="download-outline" tint="#2E86DE" label={t('settings.export')} sub={t('settings.exportSub')} onPress={exportBackup} />
@@ -526,7 +502,6 @@ export default function SettingsScreen({ navigation }) {
         }}
       />
       <GroupBoardSheet visible={!!board} group={board} onClose={() => setBoard(null)} />
-      <ClassroomsSheet visible={classroomsOpen} onClose={() => setClassroomsOpen(false)} />
       <PrivacySheet
         visible={privacyOpen}
         onClose={() => setPrivacyOpen(false)}

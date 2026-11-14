@@ -16,6 +16,7 @@ export default {
     focus: 'फ़ोकस टाइमर',
     subjects: 'विषय',
     flashcards: 'फ़्लैशकार्ड',
+    classrooms: 'क्लासरूम',
     progress: 'प्रगति',
     profile: 'मेरी प्रोफ़ाइल',
     settings: 'सेटिंग्स',

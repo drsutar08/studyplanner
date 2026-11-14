@@ -1,10 +1,10 @@
 # Classes: teachers share study materials with their students (plan)
 
-Status: **Phase 1 built 2026-11-14** (not yet tried on a phone). Called **Classrooms** in the app (Settings → Classrooms),
+Status: **Phase 1 built 2026-11-14** (not yet tried on a phone). Called **Classrooms** in the app (Menu → Classrooms),
 so it isn't confused with timetable classes. Its own tables, not study groups: `20261117000000_classrooms.sql`.
 
 Code: `src/classrooms.js` (logic, tested by `e2e/classrooms.test.mjs`), `src/cloud/classrooms.js` (server calls, live
-alerts), `src/components/ClassroomsSheet.js` (screens), `src/materialFile(.native).js` (upload and open files).
+alerts), `src/components/Classrooms.js` and `src/screens/ClassroomsScreen.js` (the page), `src/materialFile(.native).js` (upload and open files).
 
 Phase 1 limits to know: "New material" and "join request" alerts are in-app messages while the app is open (no push
 notification when it's closed yet). Classrooms aren't in the nightly backup. Files are opened by downloading them and
@@ -39,7 +39,12 @@ handing them to the phone's PDF, Office or photo app.
 
 - Students see only the teacher's name and the materials, never other students' names or emails.
 - The teacher sees students' display names, not their tasks, grades or emails.
-- Report a material or class. Reports go to a `reports` table for the developer to review and remove.
+- Report a material or a classroom (`20261118000000_classroom_reports.sql`). The teacher sees reports about their
+  materials in the classroom's **Reports** tab, without the reporter's name, and can resolve them or delete the
+  material. Studyly admins (emails in `app_config.report_admins`, first `drsutar08@gmail.com`) see every report with
+  the reporter under Menu → Classrooms → **Reports to review**, and can resolve, remove the material or delete
+  the classroom. At most 20 reports per person a day. `20261119000000_classroom_reports_fix.sql` fills in reports sent
+  before 20261118 was applied (they had no material title, so the teacher didn't see them).
 - Update before release: privacy policy, terms (teacher responsibility for uploaded content and copyright),
   the Privacy & data page, and the Play data-safety form (names shared with teachers; files stored).
 

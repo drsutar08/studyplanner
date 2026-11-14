@@ -99,14 +99,38 @@ test('server errors map to messages', () => {
   assert.equal(c.classroomErrorKind(new Error('Network request failed')), 'offline');
   assert.equal(c.classroomErrorKind(null), 'offline');
 });
-test('summary for the Settings row', () => {
+test('summary for the Settings row: students, requests and reports across classrooms taught', () => {
   const s = c.summary([
-    { role: 'teacher', pending: 2 },
-    { role: 'teacher', pending: 1 },
-    { role: 'student', pending: null },
+    { role: 'teacher', students: 12, pending: 2, reports: 1 },
+    { role: 'teacher', students: 3, pending: 1, reports: 0 },
+    { role: 'student', status: 'approved' },
+    { role: 'student', status: 'pending' },
   ]);
-  assert.deepEqual(s, { teaching: 2, joined: 1, waiting: 3 });
-  assert.deepEqual(c.summary(null), { teaching: 0, joined: 0, waiting: 0 });
+  assert.deepEqual(s, { teaching: 2, students: 15, waiting: 3, reports: 1, joined: 1, requested: 1 });
+  assert.deepEqual(c.summary(null), { teaching: 0, students: 0, waiting: 0, reports: 0, joined: 0, requested: 0 });
+});
+test('summary parts: a teacher with no students still sees "0 students"; nothing shows for none', () => {
+  assert.deepEqual(c.summaryParts(c.summary([{ role: 'teacher', students: 0, pending: 0 }])), [['rowTeaching', 1], ['studentsCount', 0]]);
+  assert.deepEqual(c.summaryParts(c.summary([{ role: 'student', status: 'approved' }])), [['rowJoined', 1]]);
+  assert.deepEqual(c.summaryParts(c.summary([])), []);
+  assert.deepEqual(
+    c.summaryParts(c.summary([{ role: 'teacher', students: 1, pending: 2, reports: 3 }])).map(([k]) => k),
+    ['rowTeaching', 'studentsCount', 'rowWaiting', 'rowReports']
+  );
+});
+test('menu badge: requests and reports to look at, plus classrooms with something new', () => {
+  const list = [
+    { id: 'a', role: 'teacher', pending: 2, reports: 1 },
+    { id: 'b', role: 'student', status: 'approved', latest: '2026-11-05T10:00:00Z' },
+    { id: 'c', role: 'student', status: 'approved', latest: '2026-11-01T10:00:00Z' },
+    { id: 'd', role: 'student', status: 'pending', latest: null },
+  ];
+  assert.equal(c.classroomBadge(list, { c: '2026-11-02T00:00:00Z' }), 4);
+  assert.equal(c.classroomBadge(null), 0);
+});
+test('report errors', () => {
+  assert.equal(c.classroomErrorKind({ message: 'too_many_reports' }), 'tooManyReports');
+  assert.equal(c.classroomErrorKind({ message: 'not_allowed' }), 'storage');
 });
 
 console.log(`\n${pass} passed${process.exitCode ? ', some FAILED' : ''}`);

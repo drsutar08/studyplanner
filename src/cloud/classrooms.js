@@ -127,6 +127,33 @@ export async function fileUrl(path) {
 export const reportClassroom = async ({ classroomId, materialId, reason }) =>
   must(await supabase.from('classroom_reports').insert({ classroom_id: classroomId, material_id: materialId || null, reason }));
 
+// ---------- reports (the 20261118 migration) ----------
+// The teacher's: reports about this classroom's materials, without who sent them
+export const listReports = async (classroomId) => must(await supabase.rpc('classroom_reports_for', { cid: classroomId })) || [];
+export const resolveReport = async (id) => must(await supabase.rpc('resolve_classroom_report', { rid: id }));
+// Studyly admins (app_config.report_admins): every report, with the reporter
+export async function isReportAdmin() {
+  try {
+    return !!must(await supabase.rpc('is_report_admin'));
+  } catch {
+    return false;
+  }
+}
+export const adminReports = async () => must(await supabase.rpc('admin_reports')) || [];
+// The reports this account sent, and where each stands (the 20261120 migration). [] when it isn't set up yet.
+export async function myReports() {
+  try {
+    return must(await supabase.rpc('my_reports')) || [];
+  } catch {
+    return [];
+  }
+}
+// An admin takes a reported material down (its file too)
+export async function removeMaterialById(id) {
+  const rows = must(await supabase.from('classroom_materials').select('id,file_path').eq('id', id));
+  if (rows && rows[0]) await deleteMaterial(rows[0]);
+}
+
 // ---------- live changes ----------
 export function watchClassroom(classroomId, onChange) {
   const channel = supabase

@@ -17,6 +17,7 @@ export default {
     focus: 'Temporizador',
     subjects: 'Materias',
     flashcards: 'Tarjetas',
+    classrooms: 'Aulas',
     progress: 'Progreso',
     profile: 'Mi perfil',
     settings: 'Ajustes',
