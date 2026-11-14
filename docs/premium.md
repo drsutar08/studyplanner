@@ -14,8 +14,15 @@ What each plan includes, how the limits are enforced, and how to switch them on 
 | Progress report | This week | Month, term and the PDF |
 | Ads | A few, phone apps only (G-rated for under-18s) | None |
 
-Prices: $2.99 a month or $19.99 a year, the same in every country. Google Play and the App Store charge each buyer
-the local-currency equivalent of those dollar prices (they can't charge in dollars where the local currency is different).
+Prices (decided 2026-11-14):
+
+| | Every other country | India (set by hand) |
+|---|---|---|
+| Monthly | $2.99 (Play converts it to the local currency) | ₹99 |
+| Yearly | $19.99 | ₹699 (about 41% less than 12 × ₹99) |
+
+Google Play and the App Store charge each buyer in their own currency; India's prices include GST. The Premium page
+shows whatever price the store returns, so the app needs no change.
 
 ## How it works
 

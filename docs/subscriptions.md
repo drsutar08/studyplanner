@@ -23,8 +23,10 @@ The web has no buying yet: Razorpay or Stripe later.
   - `monthly`: $2.99 / month, auto-renewing;
   - `yearly`: $19.99 / year, auto-renewing.
 
-  Leave the other countries on Play's conversion of the dollar price (don't set separate local prices). Play only lets you sell after a build has been
-  uploaded to a testing track.
+  **India is set by hand** (decided 2026-11-14): on each base plan's pricing page, change India to **₹99 / month**
+  and **₹699 / year** (GST included; Play collects it). Leave every other country on Play's conversion of the dollar
+  price. Set these before the first sale: changing a price later doesn't move existing subscribers without Play's
+  price-change flow. Play only lets you sell after a build has been uploaded to a testing track.
 - **App Store Connect** (needs the Apple Developer account): a subscription group "Premium" with
   `premium_monthly` and `premium_yearly`.
 
