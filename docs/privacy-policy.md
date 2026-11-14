@@ -19,6 +19,7 @@ are in the app under **Settings → Privacy & data**.
 | **Photos you attach** to tasks | To show them on all your devices | Supabase storage, locked to your account |
 | **A copy on each device** where you sign in | So the app works offline | That device; signing out removes it |
 | **Study groups you make or join**: the group, its timetable and its board posts and replies | To share them with the group | Supabase database |
+| **Classrooms you teach or join**: the classroom, its materials (files, links, notes), each student's name and whether the teacher approved them, and reports you send | To share materials with the teacher's approved students | Supabase database and storage |
 | **AI helper use**: how many times you asked today | The daily limit of 30 | Supabase database |
 | **Error reports**: what went wrong, the app version and the kind of device | To find and fix problems | Supabase database |
 
@@ -32,6 +33,10 @@ accounts can't change it.
 - **Studying now.** While your focus timer runs, the people in your study groups see your name, the subject and when
   the session ends. They never see the task. This isn't stored: it disappears when the timer stops or the app closes.
   You can turn it off in **Settings → Study groups**.
+- **Classrooms.** When you ask to join a classroom, its teacher sees your name (never your email, tasks or grades)
+  and decides whether to approve you. Students in a classroom never see each other. A teacher's name and the
+  materials they share are seen only by the students they approved. A report you send about a classroom goes to
+  the Studyly team, not to the teacher.
 - **Progress reports** go only to the person you send them to, by the app you choose to share with.
 - **The AI helper**, only when you use it. See below.
 
@@ -96,10 +101,10 @@ Everything is in the app:
 - **See and change** your data: it's all in the app, and your name, school and photo are in your profile.
 - **Get a copy:** Settings → Privacy & data → *Save a copy of your data*, or Settings → Data → Export. This saves one
   file with everything, which can also be restored.
-- **Stop sharing:** leave a study group, stop sharing a group you made, or turn off *Show my focus sessions to my
-  groups*.
+- **Stop sharing:** leave a study group or a classroom, stop sharing a group you made, delete a classroom you teach,
+  or turn off *Show my focus sessions to my groups*.
 - **Delete your account:** Settings → Privacy & data → *Delete my account*. This removes your account and everything
-  in it straight away: your study data, photos, groups you own (with their boards), your replies, error reports and
+  in it straight away: your study data, photos, groups you own (with their boards), classrooms you teach (with their materials and files), your classroom requests, your replies, error reports and
   your copies in the backups. There are a few seconds to undo it in the app first.
 
 Depending on where you live, you may have more rights over your data, such as asking for a copy or for it to be

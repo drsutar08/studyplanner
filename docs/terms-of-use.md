@@ -27,11 +27,16 @@ handled.
 - A group's owner can remove posts and replies on its board. We may remove content or close accounts that break these
   terms.
 
-## 3. Study groups
+## 3. Study groups and classrooms
 
 - When you share a group, its members see what the group shares (see the privacy policy). Only share with people you
   trust, and only what you're happy for them to see.
 - Leaving or stopping a group ends sharing from then on. Copies members already added to their own lists stay theirs.
+- **Teachers** who make a classroom are responsible for what they share in it. Share only materials you have the
+  right to share (your own, or ones the copyright owner allows), and approve only your own students.
+- Students should join only classrooms their real teacher gave them the code for. Anyone can report a classroom or
+  a material; we may remove it, or close the account, if it breaks these terms.
+- Deleting a classroom removes its materials and files for everyone in it.
 
 ## 4. The AI helper
 

@@ -23,6 +23,7 @@ import { useGroupActions } from './src/groupActions';
 import { useToast } from './src/toast';
 import { useLiveGroups } from './src/cloud/liveGroups';
 import { useGroupBoards } from './src/cloud/groupBoard';
+import { useClassroomAlerts } from './src/cloud/classrooms';
 import { useStudyTogether } from './src/cloud/studyTogether';
 import { usePlanLoader } from './src/cloud/plan';
 import { startPurchases, endPurchases } from './src/purchases';
@@ -57,6 +58,7 @@ import { CalendarDayContext } from './src/calendarDay';
 import { nudgeNow } from './src/smartReminders';
 import { useClock } from './src/clock';
 import ErrorBoundary from './src/ErrorBoundary';
+import UpdateGate from './src/components/UpdateGate';
 import { installGlobalHandlers } from './src/monitoring';
 import './src/install'; // catches the browser's install offer as soon as the app loads
 import { PremiumHost } from './src/components/PremiumSheet';
@@ -129,6 +131,15 @@ function Shell({ route }) {
     state,
     dispatch,
     onNote: (g, note) => show({ message: t('board.newNoteToast', { name: g.name, note: note.body.length > 90 ? `${note.body.slice(0, 90)}…` : note.body }), duration: 8000 }),
+  });
+  useClassroomAlerts({
+    enabled: cloudConfigured && !!user && state.ready,
+    userId: user && user.id,
+    onEvent: ({ type, classroom, row }) => {
+      if (type === 'material') show({ message: t('classroom.toastMaterial', { name: classroom.name, title: row.title }), duration: 8000 });
+      else if (type === 'request') show({ message: t('classroom.toastRequest', { name: classroom.name, student: row.student_name || t('classroom.aStudent') }), duration: 8000 });
+      else if (type === 'approved') show({ message: t('classroom.toastApproved', { name: classroom.name }), tone: 'success', duration: 8000 });
+    },
   });
   useLiveGroups({
     enabled: cloudConfigured && !!user && state.ready,
@@ -514,6 +525,7 @@ export default function App() {
         <StoreProvider>
           <ToastProvider>
             <Root />
+            <UpdateGate />
           </ToastProvider>
         </StoreProvider>
       </AuthProvider>

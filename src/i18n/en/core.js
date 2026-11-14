@@ -131,6 +131,14 @@ export default {
     tabA11y: '{label} tab',
     addTask: 'Add task',
   },
+  appUpdate: {
+    requiredTitle: 'Update required',
+    requiredBody: 'This version of Studyly is no longer supported. Update to the latest version to keep using the app. Your tasks and subjects are safe.',
+    availableTitle: 'Update available',
+    availableBody: 'A new version of Studyly is ready, with improvements and fixes.',
+    update: 'Update now',
+    later: 'Later',
+  },
   errorScreen: {
     title: 'Something went wrong',
     body: 'The app hit an unexpected problem. Your tasks and subjects are safe. Try again, and if it keeps happening please tell us what you were doing.',

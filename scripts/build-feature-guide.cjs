@@ -383,8 +383,8 @@ const AREAS = [
     ],
   },
   {
-    title: '6. Study groups',
-    intro: 'Classmates can share timetables, and the group’s owner can post notes and tasks for everyone.',
+    title: '6. Study groups and classrooms',
+    intro: 'Classmates can share timetables, and the group’s owner can post notes and tasks for everyone. Teachers can share study materials with their own students in a classroom.',
     features: [
       {
         name: 'Live study groups',
@@ -423,6 +423,28 @@ const AREAS = [
         tip: 'Only the group’s owner and members can see it, and nothing is stored: a status goes when the timer stops or the app closes.',
         shots: [['44-studying-now.png', 'Studying now, with Join']],
         mobileShots: [['45-studying-now.png', 'Studying now']],
+      },
+      {
+        name: 'Classrooms for teachers (new)',
+        what: 'A teacher makes a classroom and shares study materials with their own students only: PDFs, photos of the board, Word, PowerPoint and Excel files (up to 20 MB each), web links such as videos, and notes. Students join with the classroom’s 8-letter code, and the teacher approves each one. Students who aren’t approved, and anyone else, can’t see anything.',
+        how: [
+          'Settings → Classrooms → Create → give it a name (e.g. “Physics 10-B”) and a subject → Create classroom.',
+          'Share the code with the class (the Share button sends it by WhatsApp, email and so on).',
+          'Students tab: Approve or Decline each request. Remove a student at any time, or make a new code if the old one is passed around.',
+          'Materials tab → Add material → File, Link or Note. Pin important ones to the top; the bin deletes one (tap twice).',
+        ],
+        tip: 'Free: 1 classroom and 200 MB of files. Premium: 10 classrooms and 5 GB. Students never see each other’s names; the teacher sees only names, never their tasks or grades.',
+      },
+      {
+        name: 'Joining a classroom (new)',
+        what: 'Students get their teacher’s materials in the app. New materials show a “New” badge, and a message pops up when the teacher adds one while the app is open.',
+        how: [
+          'Settings → Classrooms → Join with a code → type the code from the teacher → Ask to join.',
+          'Wait for the teacher to approve (a message says “You’re in!”), then open the classroom.',
+          'Tap a file to open it in the phone’s PDF, Office or photo app; tap a link to open it in the browser.',
+          'The flag button reports a material, and “Report this classroom” reports the whole classroom, to the Studyly team.',
+        ],
+        tip: 'Leave a classroom at any time from inside it. File links work for one hour, so a forwarded link stops working.',
       },
     ],
   },
@@ -483,6 +505,15 @@ const AREAS = [
       {
         name: 'Error reports and limits',
         what: 'If something goes wrong in the app, a short private report is sent to the developer so it can be fixed. Sensible limits keep the service healthy: up to 10 live groups per person, 200 members per group and 100 posts on a group board.',
+      },
+      {
+        name: 'App updates (new)',
+        what: 'When a new version is out, the phone app asks the student to update. For an important release the old version shows an “Update required” screen that can’t be skipped, so everyone moves to the version that works with the latest data. For other releases, an “Update available” message can be put off with Later and comes back only when there is a newer version.',
+        how: [
+          'Tap Update now to open the app’s page in Google Play, then tap Update.',
+          'The student’s tasks and subjects are safe: they are in their account and appear again after the update.',
+        ],
+        tip: 'Only in the phone apps. The web version is always the newest.',
       },
     ],
   },

@@ -38,6 +38,30 @@ iOS needs a paid Apple Developer account (US$99/year) **(you)**.
 - `version` in `app.json` is what users see (1.0.0).
 - Build numbers (`versionCode` / `buildNumber`) go up by themselves on production builds.
 
+### Asking people to update (forced update)
+
+The app checks `app_config.app_update` on Supabase at launch and whenever it comes back to the front
+(migration `20261116000000_app_update.sql`, popup in `src/components/UpdateGate.js`). Numbers are **build numbers**
+(the Android versionCode shown in Play Console, e.g. `1.0.1 (6)` is build 6), not the `1.0.1` version name.
+
+| Setting | Effect on phones with an older build |
+|---|---|
+| `latest_build` | "Update available" popup with **Later**; shown again only for a newer build |
+| `min_build` | "Update required" screen that can't be closed; only **Update now** (opens Google Play) |
+
+After a release is **live on Google Play** (not before, or people are sent to a page with no update yet), run in the
+Supabase SQL editor, Development first, then Production:
+
+```sql
+-- offer build 7 to everyone
+update public.app_config set value = jsonb_set(value, '{android,latest_build}', '7') where key = 'app_update';
+-- and, for a release everyone must have, block older builds
+update public.app_config set value = jsonb_set(value, '{android,min_build}', '7') where key = 'app_update';
+```
+
+Set a value back to `0` to turn that check off. Offline phones, the web app and Expo Go are never blocked. Builds made
+before this feature (build 6 and older) don't have the check, so they can't be forced.
+
 ## 5. Permissions the Android app asks for
 
 Internet, notifications (Android 13+ shows a prompt when the user turns on phone notifications in Settings), vibration (session end), wake lock (keep the screen on while focusing) and the microphone (voice quick add, asked the first time the mic is tapped). Camera, storage and "draw over other apps" permissions are removed on purpose.

@@ -126,6 +126,14 @@ export default {
     tabA11y: 'Pestaña {label}',
     addTask: 'Añadir tarea',
   },
+  appUpdate: {
+    requiredTitle: 'Actualización necesaria',
+    requiredBody: 'Esta versión de Studyly ya no es compatible. Actualiza a la última versión para seguir usando la app. Tus tareas y materias están a salvo.',
+    availableTitle: 'Actualización disponible',
+    availableBody: 'Hay una nueva versión de Studyly lista, con mejoras y correcciones.',
+    update: 'Actualizar ahora',
+    later: 'Más tarde',
+  },
   errorScreen: {
     title: 'Algo salió mal',
     body: 'La app tuvo un problema inesperado. Tus tareas y materias están a salvo. Inténtalo de nuevo y, si sigue pasando, cuéntanos qué estabas haciendo.',

@@ -5,6 +5,7 @@ import { t, getLanguage } from './i18n';
 import { supabase, cloudConfigured } from './cloud/supabase';
 import { DEVICE_SETTINGS } from './cloud/sync';
 import { removeAllPhotos } from './cloud/photos';
+import { removeAllClassroomFiles } from './cloud/classrooms';
 import { LEGAL_VERSION } from './legal';
 import { appUrl } from './appScheme';
 
@@ -236,6 +237,7 @@ export function AuthProvider({ children }) {
   const deleteAccount = useCallback(async () => {
     // the photos first (Storage files can't be removed from the database side)
     await removeAllPhotos(user.id).catch(() => {});
+    await removeAllClassroomFiles(user.id).catch(() => {});
     const { error } = await supabase.rpc('delete_my_account');
     if (error) return { error: errorText(error) };
     await AsyncStorage.multiRemove([settingsKey(user.id), `studyplanner:v1:${user.id}`, `studyplanner:sync:${user.id}`]).catch(() => {});
