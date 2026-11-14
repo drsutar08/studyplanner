@@ -7,7 +7,7 @@ import { pathToFileURL } from 'node:url';
 
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'plans-'));
 fs.writeFileSync(path.join(tmp, 'plans.mjs'), fs.readFileSync(new URL('../src/plans.js', import.meta.url), 'utf8'));
-const { readPlan, limited, aiLocked, roomFor, premiumOnly, photoCount, NO_LIMITS, FREE } = await import(pathToFileURL(path.join(tmp, 'plans.mjs')).href);
+const { readPlan, limited, aiLocked, roomFor, premiumOnly, photoCount, NO_LIMITS, FREE, pricesFor, PRICES } = await import(pathToFileURL(path.join(tmp, 'plans.mjs')).href);
 
 let pass = 0;
 const test = (name, fn) => {
@@ -82,6 +82,13 @@ test('photos are counted on every task, archived ones too', () => {
   const tasks = [{ attachments: [{ kind: 'photo' }, { kind: 'link' }] }, { attachments: [] }, {}];
   assert.equal(photoCount(tasks, [{ attachments: [{ kind: 'photo' }, { kind: 'photo' }] }]), 3);
   assert.equal(photoCount(), 0);
+});
+
+test("fallback prices follow the phone's region: rupees in India, dollars elsewhere", () => {
+  assert.deepEqual(pricesFor('IN'), { month: '₹99', year: '₹699' });
+  assert.deepEqual(pricesFor('in'), { month: '₹99', year: '₹699' });
+  assert.deepEqual(pricesFor('US'), PRICES);
+  assert.deepEqual(pricesFor(null), { month: '$2.99', year: '$19.99' });
 });
 
 console.log(`\n${pass} passed`);

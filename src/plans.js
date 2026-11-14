@@ -7,8 +7,12 @@ export const NO_LIMITS = { loaded: false, plan: 'free', enforced: false, expires
 export const FREE = { ai: 0, aiPeriod: 'day', cards: 200, photos: 50, groups: 1 };
 export const PREMIUM = { ai: 30, aiPeriod: 'day', cards: null, photos: 2000, groups: 10 }; // null: unlimited
 
-// prices to show until the store's own are loaded (the stores charge the local equivalent of these dollar prices)
+// prices to show until the store's own are loaded (the stores charge the local equivalent of these dollar prices),
+// and the countries whose price is set by hand in Play Console (docs/subscriptions.md): keep the two in step
 export const PRICES = { month: '$2.99', year: '$19.99' };
+export const LOCAL_PRICES = { IN: { month: '₹99', year: '₹699' } };
+// the fallback for a phone's region (a country code such as 'IN'; anything unknown gets the dollar prices)
+export const pricesFor = (region) => LOCAL_PRICES[String(region || '').toUpperCase()] || PRICES;
 
 // The comparison on the Premium page: [key, free, premium]; each value an i18n key under premium.values, or a number
 export const COMPARISON = [

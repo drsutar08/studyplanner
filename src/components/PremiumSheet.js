@@ -7,7 +7,17 @@ import { formatDate } from '../dates';
 import { usePlan, refreshPlan, planNow } from '../cloud/plan';
 import { useToast } from '../toast';
 import { purchasesReady, loadPlans, buy, restore, manage } from '../purchases';
-import { COMPARISON, PRICES, PREMIUM, limited } from '../plans';
+import { getLocales } from 'expo-localization';
+import { COMPARISON, pricesFor, PREMIUM, limited } from '../plans';
+
+// the phone's country ('IN'), for the prices shown before the store's own arrive
+const phoneRegion = () => {
+  try {
+    return (getLocales()[0] || {}).regionCode || null;
+  } catch {
+    return null;
+  }
+};
 
 // Study Planner Premium: the account's plan, Free and Premium side by side, and the prices. Opened from Settings
 // or from a "limit reached" message with openPremium(why). <PremiumHost /> is rendered once, in App.js.
@@ -36,7 +46,7 @@ export function PremiumHost() {
   if (!open) return null;
   const close = () => setState({ open: false, why: null });
   const premium = plan.plan === 'premium';
-  const prices = PRICES;
+  const prices = pricesFor(phoneRegion());
   const status = premium
     ? plan.expiresAt
       ? t(plan.source === 'gift' ? 'premium.giftUntil' : 'premium.premiumUntil', { date: formatDate(new Date(plan.expiresAt), { day: 'numeric', month: 'long', year: 'numeric' }) })
